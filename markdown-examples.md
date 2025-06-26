@@ -1,3 +1,5 @@
+
+
 # Markdown 扩展示例
 
 本页面展示了 VitePress 提供的一些内置 markdown 扩展功能。
