@@ -35,8 +35,8 @@ export default defineConfig({
           { text: '用户指南', link: '/guide', activeMatch: '/guide' },
           { text: '常见问题', link: '/faq', activeMatch: '/faq' },
           { text: '教程中心', link: '/tutorials', activeMatch: '/tutorials' },
+          { text: '免费账号', link: '/free-accounts', activeMatch: '/free-accounts' },
           { text: '桔子小铺', link: 'https://shop.muooy.com' },
-          { text: '免费账号', link: '/free-appldid', activeMatch: '/free-appldid' },
           {
             text: '交流群',
             items: [
@@ -46,15 +46,49 @@ export default defineConfig({
           },
         ],
 
-        sidebar: [
-          {
-            text: 'TEST',
-            items: [
-              { text: 'Markdown Examples', link: '/markdown-examples' },
-              { text: 'Runtime API Examples', link: '/api-examples' }
-            ]
-          }
-        ],
+        sidebar: {
+          '/guide/': [// 当用户位于 `guide` 目录时，会显示此侧边栏
+            {
+              text: '用户指南',
+              items: [
+                { text: 'Index', link: '/guide/' },
+              ]
+            }
+          ],
+          '/faq/': [// 当用户位于 `faq` 目录时，会显示此侧边栏
+            {
+              text: '常见问题',
+              items: [
+                { text: 'Index', link: '/faq/' },
+              ]
+            }
+          ],
+          '/tutorials/': [// 当用户位于 `faq` 目录时，会显示此侧边栏
+            {
+              text: '教程中心',
+              items: [
+                { text: 'Index', link: '/tutorials/' },
+              ]
+            }
+          ],
+          '/free-accounts/': [// 当用户位于 `faq` 目录时，会显示此侧边栏
+            {
+              text: '免费账户',
+              items: [
+                { text: 'Index', link: '/free-accounts/' },
+              ]
+            }
+          ],
+        },
+        // sidebar: [
+        //   {
+        //     text: 'TEST',
+        //     items: [
+        //       { text: 'Markdown Examples', link: '/markdown-examples' },
+        //       { text: 'Runtime API Examples', link: '/api-examples' }
+        //     ]
+        //   }
+        // ],
         lastUpdatedText: '最后更新于',
         outlineTitle: '页面导航',
         docFooter: { // 中文的上一页/下一页
@@ -79,8 +113,8 @@ export default defineConfig({
           { text: 'User Guide', link: '/en/guide', activeMatch: '/en/guide' },
           { text: 'FAQ', link: '/en/faq', activeMatch: '/en/faq' },
           { text: 'Tutorial Center', link: '/en/tutorials', activeMatch: '/en/tutorialsq' },
+          { text: 'Free Accounts', link: '/en/free-accounts', activeMatch: '/en/free-accounts' },
           { text: "JuZi's Shop", link: 'https://shop.muooy.com' },
-          { text: 'Free Accounts', link: '/en/free-appldid', activeMatch: '/en/free-appldid' },
           {
             text: 'Community',
             items: [
