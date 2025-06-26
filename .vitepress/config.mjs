@@ -32,10 +32,10 @@ export default defineConfig({
         // https://vitepress.dev/reference/default-theme-config
         nav: [
           { text: '首页', link: '/' },
-          { text: '用户指南', link: '/guide', activeMatch: '/guide' },
-          { text: '常见问题', link: '/faq', activeMatch: '/faq' },
-          { text: '教程中心', link: '/tutorials', activeMatch: '/tutorials' },
-          { text: '免费账号', link: '/free-accounts', activeMatch: '/free-accounts' },
+          { text: '用户指南', link: '/guide/', activeMatch: '/guide' },
+          { text: '常见问题', link: '/faq/', activeMatch: '/faq' },
+          { text: '教程中心', link: '/tutorials/', activeMatch: '/tutorials' },
+          { text: '免费账号', link: '/free-accounts/', activeMatch: '/free-accounts' },
           { text: '桔子小铺', link: 'https://shop.muooy.com' },
           {
             text: '交流群',
@@ -47,48 +47,11 @@ export default defineConfig({
         ],
 
         sidebar: {
-          '/guide/': [// 当用户位于 `guide` 目录时，会显示此侧边栏
-            {
-              text: '用户指南',
-              items: [
-                { text: 'Index', link: '/guide/' },
-              ]
-            }
-          ],
-          '/faq/': [// 当用户位于 `faq` 目录时，会显示此侧边栏
-            {
-              text: '常见问题',
-              items: [
-                { text: 'Index', link: '/faq/' },
-              ]
-            }
-          ],
-          '/tutorials/': [// 当用户位于 `faq` 目录时，会显示此侧边栏
-            {
-              text: '教程中心',
-              items: [
-                { text: 'Index', link: '/tutorials/' },
-              ]
-            }
-          ],
-          '/free-accounts/': [// 当用户位于 `faq` 目录时，会显示此侧边栏
-            {
-              text: '免费账户',
-              items: [
-                { text: 'Index', link: '/free-accounts/' },
-              ]
-            }
-          ],
+          '/guide/': getGuideSidebarZhCN(),
+          '/faq/': getFaqSidebarZhCN(),
+          '/tutorials/': getTutorialsSidebarZhCN(),
+          '/free-accounts/': getFreeAccountsSidebarZhCN(),
         },
-        // sidebar: [
-        //   {
-        //     text: 'TEST',
-        //     items: [
-        //       { text: 'Markdown Examples', link: '/markdown-examples' },
-        //       { text: 'Runtime API Examples', link: '/api-examples' }
-        //     ]
-        //   }
-        // ],
         lastUpdatedText: '最后更新于',
         outlineTitle: '页面导航',
         docFooter: { // 中文的上一页/下一页
@@ -110,10 +73,10 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: 'Home', link: '/en/' },
-          { text: 'User Guide', link: '/en/guide', activeMatch: '/en/guide' },
-          { text: 'FAQ', link: '/en/faq', activeMatch: '/en/faq' },
-          { text: 'Tutorial Center', link: '/en/tutorials', activeMatch: '/en/tutorialsq' },
-          { text: 'Free Accounts', link: '/en/free-accounts', activeMatch: '/en/free-accounts' },
+          { text: 'User Guide', link: '/en/guide/', activeMatch: '/en/guide' },
+          { text: 'FAQ', link: '/en/faq/', activeMatch: '/en/faq' },
+          { text: 'Tutorial Center', link: '/en/tutorials/', activeMatch: '/en/tutorialsq' },
+          { text: 'Free Accounts', link: '/en/free-accounts/', activeMatch: '/en/free-accounts' },
           { text: "JuZi's Shop", link: 'https://shop.muooy.com' },
           {
             text: 'Community',
@@ -124,15 +87,12 @@ export default defineConfig({
           }
         ],
 
-        sidebar: [
-          {
-            text: 'TEST',
-            items: [
-              { text: 'Markdown Examples', link: '/en/markdown-examples' },
-              { text: 'Runtime API Examples', link: '/en/api-examples' }
-            ]
-          }
-        ],
+        sidebar: {
+          '/en/guide/': getGuideSidebarEnUs(),
+          '/en/faq/': getFaqSidebarEnUs(),
+          '/en/tutorials/': getTutorialsSidebarEnUs(),
+          '/en/free-accounts/': getFreeAccountsSidebarEnUs(),
+        },
         editLink: { //编辑链接
           pattern: 'https://github.com/juzixp/OrangeTeaching/edit/main/:path',
         }
@@ -140,3 +100,97 @@ export default defineConfig({
     }
   }
 })
+
+// 中文侧边栏
+function getGuideSidebarZhCN() {
+  return [
+    {
+      text: 'Apple 指南',
+      items: [
+        {
+          text: '如何登录App Store使用', link: '/guide/login-app-store',
+        },
+        { text: '苹果账号邮箱/密码/安全问题的修改方法', link: '/guide/AppleIdUpdate' }
+      ]
+    }
+  ]
+}
+function getFaqSidebarZhCN() {
+  return [
+    {
+      text: '常见问题',
+      items: [
+        { text: 'Index', link: '/' },
+      ]
+    }
+  ]
+}
+
+function getTutorialsSidebarZhCN() {
+  return [
+    {
+      text: '教程中心',
+      items: [
+        { text: 'Index', link: '/' },
+      ]
+    }
+  ]
+}
+function getFreeAccountsSidebarZhCN() {
+  return [
+    {
+      text: '苹果APPLEID账户',
+      items: [
+        { text: '美区AppleID账户免费共享', link: '/free-accounts/appleid-us' },
+      ]
+    }
+  ]
+}
+
+
+// 英文侧边栏
+
+function getGuideSidebarEnUs() {
+  return [
+    {
+      text: '用户指南',
+      items: [
+        {
+          text: 'Test1', link: '/guide',
+        },
+
+      ]
+    }
+  ]
+}
+function getFaqSidebarEnUs() {
+  return [
+    {
+      text: '教程中心',
+      items: [
+        { text: 'Index', link: '/' },
+      ]
+    }
+  ]
+}
+
+function getTutorialsSidebarEnUs() {
+  return [
+    {
+      text: '常见问题',
+      items: [
+        { text: 'Index', link: '/' },
+      ]
+    }
+  ]
+}
+function getFreeAccountsSidebarEnUs() {
+  return [
+    {
+      text: '免费账户',
+      items: [
+        { text: 'Index', link: '/' },
+      ]
+    }
+  ]
+}

@@ -11,7 +11,7 @@ hero:
       link: https://shop.muooy.com
     - theme: alt
       text: View Documentation
-      link: /en/api-examples
+      link: /en/guide/
 
 features:
   - icon: 📦

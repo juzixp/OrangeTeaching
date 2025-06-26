@@ -12,7 +12,7 @@ hero:
       link: https://shop.muooy.com
     - theme: alt
       text: 查看文档
-      link: /api-examples
+      link: /guide/
 
 features:
   - icon: 📦

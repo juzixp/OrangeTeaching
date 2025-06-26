@@ -1,5 +1,5 @@
 # 用户指南目录
----
+
 <script setup>
 import { useData } from 'vitepress'
 import { computed } from 'vue' // 引入 computed 用于创建响应式属性
@@ -11,13 +11,13 @@ const guideSidebarItems = computed(() => {
   if (!theme.value.sidebar) return [];
 
   // 1. 如果你在根语言环境的 index.md
-  if (theme.value.sidebar['/guide/']) {
-    return theme.value.sidebar['/guide/'];
+  if (theme.value.sidebar['/en/guide/']) {
+    return theme.value.sidebar['/en/guide/'];
   }
 
   // 2. 如果你在某个具体语言环境的 index.md (例如 /zh-CN/index.md)
   const currentLang = page.lang; // Use page.lang directly, it's like 'zh-CN'
-  const langSpecificGuidePath = `/${currentLang}/guide/`;
+  const langSpecificGuidePath = `/${currentLang}/en/guide/`;
   if (theme.value.sidebar[langSpecificGuidePath]) {
     return theme.value.sidebar[langSpecificGuidePath];
   }
@@ -87,5 +87,5 @@ strong {
   <div v-html="renderList(guideSidebarItems, true)"></div>
 </div>
 <div v-else>
-  <p>未找到相关内容。</p>
+  <p>未找到 APPLEID账号指南相关内容。</p>
 </div>
