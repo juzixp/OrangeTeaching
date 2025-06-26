@@ -3,29 +3,27 @@
 layout: home
 
 hero:
-  name: "桔子海外技术教学"
-  #text: "探索无限可能，尽享全球数字内容！在这里，我们为您独家提供并持续更新各类海外苹果账号，包括备受追捧的免费美区Apple ID、日本区Apple ID，以及更多来自世界各地的区域账号。"
-  tagline: 探索无限可能，尽享全球数字内容！
+  name: "Juzi Overseas Tech Tutorial"
+  tagline: Explore endless possibilities and enjoy global digital content!
   actions:
     - theme: brand
-      text: 访问商店
+      text: Visit Store
       link: https://shop.muooy.com
     - theme: alt
-      text: 查看文档
+      text: View Documentation
       link: /api-examples
 
 features:
-  - title: 独家账号资源
-    details: 我们为您提供独家、稳定且安全的海外苹果账号，包括备受追捧的免费美区、日本区 Apple ID 等，助您畅游海外应用与服务。
-  - title: 简单便捷获取
-    details: 无需复杂的注册流程，一键获取您所需的海外 Apple ID。更有详细的使用教程，即使是新手也能轻松上手。
-  - title: 持续更新与支持
-    details: 我们会定期更新账号资源，确保账号的有效性。同时提供专业的客户支持，解答您在使用过程中遇到的任何问题。
-  - title: 探索更多可能
-    details: 拥有海外 Apple ID，您将能够体验不同国家和地区的应用、游戏、音乐、视频等丰富多彩的数字内容，拓宽您的视野。
-  - title: 完全免费体验
-    details: 我们提供免费的美区 Apple ID 等账号，让您在零成本的情况下体验海外 App Store 的精彩内容。
-  - title: 安全可靠保障
-    details: 所有的账号都经过严格筛选和测试，保障您的使用安全和隐私。我们承诺提供稳定可靠的服务。
+  - title: Exclusive Account Resources
+    details: We provide exclusive, stable and secure overseas Apple IDs, including popular free US and Japan region Apple IDs, helping you access overseas apps and services.
+  - title: Easy Access
+    details: No complicated registration process, get the overseas Apple ID you need with one click. Detailed tutorials are provided for beginners.
+  - title: Continuous Updates & Support
+    details: We regularly update account resources to ensure validity. Professional customer support is available for any questions.
+  - title: Explore More Possibilities
+    details: With an overseas Apple ID, you can experience apps, games, music, videos and other digital content from different countries and regions.
+  - title: Completely Free Experience
+    details: We provide free US region Apple IDs and other accounts for you to experience overseas App Store content at zero cost.
+  - title: Secure & Reliable
+    details: All accounts are strictly screened and tested to ensure your safety and privacy. We provide stable and reliable services.
 ---
-

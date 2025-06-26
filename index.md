@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "桔子海外技术教学"
-  #text: "探索无限可能，尽享全球数字内容！在这里，我们为您独家提供并持续更新各类海外苹果账号，包括备受追捧的免费美区Apple ID、日本区Apple ID，以及更多来自世界各地的区域账号。"
+  #text: "探索无限可能，尽享全球数字内容！"
   tagline: 探索无限可能，尽享全球数字内容！
   actions:
     - theme: brand
