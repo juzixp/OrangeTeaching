@@ -3,6 +3,17 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/',
+  head: [
+    [
+      'script',
+      { charset: 'UTF-8', id: 'LA_COLLECT', src: '//sdk.51.la/js-sdk-pro.min.js' }
+    ],
+    [
+      'script',
+      {},
+      `LA.init({id:"KrUrLpURiEcV0A1f",ck:"KrUrLpURiEcV0A1f",autoTrack:true,hashMode:true})`
+    ]
+  ],
   lastUpdated: true,
   sitemap: {
     hostname: 'https://docs.applexp.com'
