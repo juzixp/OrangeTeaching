@@ -26,8 +26,8 @@ export default defineConfig({
       label: '简体中文',
       lang: 'zh',
       link: '/',
-      title: "玩果派",
-      description: "玩果派 — 探索无限可能，尽享全球数字内容！我们为您提供最新、最全的海外数字服务操作指南，涵盖美区/日本区Apple ID注册与使用技巧、热门应用解锁教程，以及更多国际平台的功能探索秘籍。本站倡导合法合规使用，严禁将所学知识用于任何违法或侵权行为。",
+      title: "果学坊",
+      description: "果学坊 — 探索无限可能，尽享全球数字内容！我们为您提供最新、最全的海外数字服务操作指南，涵盖美区/日本区Apple ID注册与使用技巧、热门应用解锁教程，以及更多国际平台的功能探索秘籍。本站倡导合法合规使用，严禁将所学知识用于任何违法或侵权行为。",
       themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         nav: [
