@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "桔子海外技术教学"
+  name: "玩果派"
   #text: "探索无限可能，尽享全球数字内容！"
   tagline: 探索无限可能，尽享全球数字内容！
   actions:

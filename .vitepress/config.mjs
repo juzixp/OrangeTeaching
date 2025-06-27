@@ -26,8 +26,8 @@ export default defineConfig({
       label: '简体中文',
       lang: 'zh',
       link: '/',
-      title: "桔子海外技术教学",
-      description: "探索无限可能，尽享全球数字内容！在这里，我们为您独家提供并持续更新各类海外苹果账号，包括备受追捧的免费美区Apple ID、日本区Apple ID，以及更多来自世界各地的区域账号。",
+      title: "玩果派",
+      description: "玩果派 — 探索无限可能，尽享全球数字内容！我们为您提供最新、最全的海外数字服务操作指南，涵盖美区/日本区Apple ID注册与使用技巧、热门应用解锁教程，以及更多国际平台的功能探索秘籍。本站倡导合法合规使用，严禁将所学知识用于任何违法或侵权行为。",
       themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         nav: [
@@ -65,8 +65,8 @@ export default defineConfig({
       },
     },
     en: {
-      title: "Orange Teaching",
-      description: "Explore endless possibilities and enjoy global digital content! Here, we exclusively provide and continuously update various overseas Apple accounts, including highly sought-after free US Apple IDs, Japanese Apple IDs, and more regional accounts from around the world.",
+      title: "FruitPie Tech",
+      description: "Unlock global digital content and explore endless possibilities with PlayGool! We provide the latest and most comprehensive guides for overseas digital services, covering registration and usage tips for US/Japan Apple IDs, popular app unlocking tutorials, and exclusive insights into international platforms. This site advocates for legal and compliant use. Strictly prohibited use for any illegal or infringing activities.",
       label: 'English',
       lang: 'en',
       link: '/en/',
@@ -111,6 +111,12 @@ function getGuideSidebarZhCN() {
           text: '如何登录App Store使用', link: '/guide/login-app-store',
         },
         { text: '苹果账号邮箱/密码/安全问题的修改方法', link: '/guide/AppleIdUpdate' }
+      ]
+    },
+    {
+      text: 'ChatGPT 指南',
+      items: [
+
       ]
     }
   ]

@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "Juzi Overseas Tech Tutorial"
+  name: "FruitPie Tech"
   tagline: Explore endless possibilities and enjoy global digital content!
   actions:
     - theme: brand
