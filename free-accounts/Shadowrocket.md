@@ -10,6 +10,10 @@ import { ElMessage } from 'element-plus'
 // 初始数据，这些是基础的账号和密码，不包含时间
 const initialAccounts = [
   { account: 'wyattgibbsjaydin@gmail.com', password: 'ti!M9d3q' },
+  { account: 'youz@juzixp.top', password: 'ltYhzMvwE%S9g@' },
+  { account: 'SalinasAugustF2j2Wg@usa.com', password: 'g8epdMBz4U' },
+  { account: '3592376770@qq.com', password: 'VCBentu6DX' },
+  { account: 'matthewmcbailey0j@gmail.com', password: 'AHjaPam7wS' },
   // ... 可以添加更多初始账号
 ];
 

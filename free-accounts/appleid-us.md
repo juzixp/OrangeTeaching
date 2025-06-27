@@ -12,6 +12,9 @@ const initialAccounts = [
   { account: 'wiboydgugq@outlook.com', password: 'TD3nDeSVhAUg' },
   { account: 'theedj6flores@outlook.com', password: 'TDCw9Y4wsXqx' },
   { account: 'charlesbfpriveraxdx@gmail.com', password: 'TDsYV59Wnqfz' },
+  { account: 'toddcopthorne@mail.com', password: 'CwF@FAM6' },
+  { account: 'steverlarson0y039@gmail.com', password: 'Eg68Kd52' },
+  { account: 'lancerowe15958@gmail.com', password: 'Te37Ku42' },
   // ... 可以添加更多初始账号
 ];
 
