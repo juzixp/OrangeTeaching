@@ -160,14 +160,14 @@ function getFreeAccountsSidebarZhCN() {
       text: '苹果AppleID账户',
       items: [
         { text: '美区AppleID账户免费共享', link: '/free-accounts/appleid-us' },
-        { text: '苹果已购小火箭共享账户', link: '/free-accounts/Shadowrocket' },
+        { text: '苹果已购Shadowrocket小火箭共享账户', link: '/free-accounts/Shadowrocket' },
       ]
     }
   ]
 }
 
 
-// 英文侧边栏1
+// 英文侧边栏
 
 
 function getGuideSidebarEnUs() {
