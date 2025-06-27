@@ -167,7 +167,7 @@ function getFreeAccountsSidebarZhCN() {
 }
 
 
-// 英文侧边栏
+// 英文侧边栏1
 
 
 function getGuideSidebarEnUs() {
