@@ -16,8 +16,8 @@ const initialAccounts = [
 // 用于在模板中渲染的响应式账号列表，包含 updateTime
 const accounts = ref([]);
 
-const LAST_UPDATE_TIME_KEY = 'lastAppleIdUpdateTime'; // localStorage 存储上次更新的时间戳
-const STORED_ACCOUNTS_KEY = 'storedAppleIdAccounts'; // localStorage 存储已生成时间的账号列表
+const LAST_UPDATE_TIME_KEY = 'lastAppleIdUpdateTime2'; // localStorage 存储上次更新的时间戳
+const STORED_ACCOUNTS_KEY = 'storedAppleIdAccounts2'; // localStorage 存储已生成时间的账号列表
 
 /**
  * 获取一个在指定天数范围内的随机日期时间
