@@ -5,7 +5,7 @@ export default defineConfig({
   base: '/',
   lastUpdated: true,
   sitemap: {
-    hostname: 'https://juzixp.github.io'
+    hostname: 'https://docs.applexp.com'
   },
   themeConfig: {
     logo: '/logo.png',
