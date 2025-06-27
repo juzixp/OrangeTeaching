@@ -101,6 +101,7 @@ export default defineConfig({
   }
 })
 
+
 // 中文侧边栏
 function getGuideSidebarZhCN() {
   return [
@@ -145,9 +146,10 @@ function getTutorialsSidebarZhCN() {
 function getFreeAccountsSidebarZhCN() {
   return [
     {
-      text: '苹果APPLEID账户',
+      text: '苹果AppleID账户',
       items: [
         { text: '美区AppleID账户免费共享', link: '/free-accounts/appleid-us' },
+        { text: '苹果已购小火箭共享账户', link: '/free-accounts/Shadowrocket' },
       ]
     }
   ]
@@ -156,14 +158,21 @@ function getFreeAccountsSidebarZhCN() {
 
 // 英文侧边栏
 
+
 function getGuideSidebarEnUs() {
   return [
     {
-      text: '用户指南',
+      text: 'Apple Guides',
       items: [
         {
-          text: 'Test1', link: '/guide',
+          text: 'How to log in to the App Store', link: '/en/guide/login-app-store',
         },
+        { text: 'How to modify Apple ID email/password/security questions', link: '/en/guide/AppleIdUpdate' }
+      ]
+    },
+    {
+      text: 'ChatGPT Guides',
+      items: [
 
       ]
     }
@@ -172,9 +181,9 @@ function getGuideSidebarEnUs() {
 function getFaqSidebarEnUs() {
   return [
     {
-      text: '教程中心',
+      text: 'FAQ',
       items: [
-        { text: 'Index', link: '/' },
+        { text: 'Index', link: '/en/' },
       ]
     }
   ]
@@ -183,9 +192,9 @@ function getFaqSidebarEnUs() {
 function getTutorialsSidebarEnUs() {
   return [
     {
-      text: '常见问题',
+      text: 'Tutorial Center',
       items: [
-        { text: 'Index', link: '/' },
+        { text: 'Index', link: '/en/' },
       ]
     }
   ]
@@ -193,9 +202,10 @@ function getTutorialsSidebarEnUs() {
 function getFreeAccountsSidebarEnUs() {
   return [
     {
-      text: '免费账户',
+      text: 'Apple Apple ID Accounts',
       items: [
-        { text: 'Index', link: '/' },
+        { text: 'Free Shared US Apple ID Accounts', link: '/en/free-accounts/appleid-us' },
+        { text: 'Shared Apple ID Account with Shadowrocket Purchased', link: '/en/free-accounts/Shadowrocket' },
       ]
     }
   ]
