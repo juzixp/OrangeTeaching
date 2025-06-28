@@ -175,7 +175,7 @@ const copyPassword = (password) => {
 
 ::: danger 警告
 
- 使用免费共享苹果账号必须从App Store 登录，千万不要登录「iCloud」跟「设置」，否则可能导致锁机或者隐私泄漏，手机被锁我们也无能为力！
+ 使用已购Shadowrocket小火箭苹果免费共享账号必须从App Store 登录，千万不要登录「iCloud」跟「设置」，否则可能导致锁机或者隐私泄漏，手机被锁我们也无能为力！
 
 :::
 
