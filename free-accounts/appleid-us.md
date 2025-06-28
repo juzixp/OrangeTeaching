@@ -56,7 +56,7 @@ const STORED_ACCOUNTS_KEY = 'storedAppleIdAccounts'; // localStorage 存储已�
  * @param {Date} date - 日期对象
  * @returns {string} 格式化后的日期时间字符串
  */
-  const formatDateTime = (date) => {
+    const formatDateTime = (date) => {
     const year = date.getFullYear();
     const month = String(date.getMonth() + 1).padStart(2, '0');
     const day = String(date.getDate()).padStart(2, '0');
@@ -64,12 +64,12 @@ const STORED_ACCOUNTS_KEY = 'storedAppleIdAccounts'; // localStorage 存储已�
     const minutes = String(date.getMinutes()).padStart(2, '0');
     const seconds = String(date.getSeconds()).padStart(2, '0');
     return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
-  };
+    };
 
 /**
  * 生成并更新账号列表的时间，并存储到 localStorage
  */
-  const generateAndStoreAccounts = () => {
+    const generateAndStoreAccounts = () => {
     accounts.value = initialAccounts.map(account => {
     // 随机选择最近1天或2天前的日期进行随机化
     const randomDaysAgo = Math.random() < 0.5 ? 1 : 2; // 50% 概率是1天前，50% 概率是2天前
@@ -82,7 +82,7 @@ const STORED_ACCOUNTS_KEY = 'storedAppleIdAccounts'; // localStorage 存储已�
     // 存储最新的更新时间戳和带有时间的账号列表
     localStorage.setItem(LAST_UPDATE_TIME_KEY, Date.now().toString());
     localStorage.setItem(STORED_ACCOUNTS_KEY, JSON.stringify(accounts.value));
-  };
+    };
 
 // 组件挂载时执行逻辑
 onMounted(() => {
@@ -184,12 +184,17 @@ const copyPassword = (password) => {
 
 ---
 
-<strong><span style="color: #ff0000;">推荐1：</span>苹果美国/日本/香港/台湾/英国等地区APPLE ID独享账号<span class="md-meta-i-c md-link"><a href="https://shop.muooy.com/"><span class="md-plain">【点击进入购买】</span></a></span></strong>
+<strong><span style="color: #ff0000;">推荐1：</span>苹果美国/日本/香港/台湾/英国等地区APPLE ID独享账号<span class="md-meta-i-c md-link"><a href="https://shop.muooy.com/" target="_blank" rel="noreferrer"><span class="md-plain">【点击进入购买】</span></a></span></strong>
 
-<strong><span style="color: #3366ff;">推荐2：</span>已购Shadowrocket（小火箭）独享账号<span class="md-meta-i-c md-link"><a href="https://shop.muooy.com/buy/15"><span class="md-plain">【点击进入购买】</span></a></span></strong>
+<strong><span style="color: #3366ff;">推荐2：</span>已购Shadowrocket（小火箭）独享账号<span class="md-meta-i-c md-link"><a href="https://shop.muooy.com/buy/15" target="_blank" rel="noreferrer"><span class="md-plain">【点击进入购买】</span></a></span></strong>
 
-<strong><span style="color: #ff6600;">推荐3：</span>已购Shadowrocket（小火箭）共享账号<span class="md-meta-i-c md-link md-expand"><a href="https://shop.muooy.com/buy/21"><span class="md-plain">【点击进入购买】</span></a></span></strong>
+<strong><span style="color: #ff6600;">推荐3：</span>已购Shadowrocket（小火箭）共享账号<span class="md-meta-i-c md-link md-expand"><a href="https://shop.muooy.com/buy/21" target="_blank" rel="noreferrer"><span class="md-plain">【点击进入购买】</span></a></span></strong>
 
+着急用的用户可以购买独享账户（一直都是你的）或者去租一个，不着急等第下次更新新的免费Apple ID
+
+<div class="buy-btn"> 
+    <a href="https://shop.muooy.com/" target="_blank" rel="noreferrer"><el-button color="#3366ff" :dark="isDark">购买独享ID</el-button></a>    <a href="https://shop.muooy.com/buy/21" target="_blank" rel="noreferrer"><el-button color="#3366ff" :dark="isDark">租借临时账号</el-button></a>
+</div>
 
 ## 免费共享账户列表
 
@@ -273,5 +278,8 @@ const copyPassword = (password) => {
 .account-table th {
   background-color: var(--vp-c-bg-soft);
   font-weight: 600;
+}
+.buy-btn{
+  text-align: center;
 }
 </style>
