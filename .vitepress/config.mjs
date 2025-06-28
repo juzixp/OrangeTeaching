@@ -30,7 +30,7 @@ export default defineConfig({
     },
     footer: { //页脚
       message: 'Released under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> License.',
-      copyright: 'Copyright © 2025 <a href="https://shop.muooy.com/">桔子小铺</a> '
+      copyright: 'Copyright © 2025 <a href="https://shop.muooy.com/">果学坊</a> '
     }
   },
   locales: {
