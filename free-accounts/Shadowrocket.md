@@ -10,11 +10,11 @@ import accountsList from '../components/free-accounts/accountsList.vue'
 
 // 初始数据，这些是基础的账号和密码，不包含时间
 const initialAccounts = [
-  { account: 'wyattgibbsjaydin@gmail.com', password: 'ti!M9d3q',status: '正常' },
-  { account: 'SalinasAugustF2j2Wg@usa.com', password: 'g8epdMBz4U',status: '正常' },
+  { account: 'shenhouyun.com_12@ICLOUD.COM', password: 'shenhouyun.CC_jAAzSmc7sS',status: '正常' },
+  { account: 'CCVCVGGI@ICLOUD.COM', password: 'shenhouyun.CC_A5NNv8XbZv',status: '正常' },
   { account: '3592376770@qq.com', password: 'VCBentu6DX',status: '正常' },
   { account: 'matthewmcbailey0j@gmail.com', password: 'AHjaPam7wS' ,status: '正常'},
-  { account: 'kenneth.sheehanmas@icloud.co', password: 'AHjaPam7wS' ,status: '异常'},
+  { account: 'kenneth.sheehanmas@icloud.com', password: 'AHjaPam7wS' ,status: '异常'},
   // ... 可以添加更多初始账号
 ];
 
