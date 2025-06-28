@@ -193,7 +193,7 @@ const copyPassword = (password) => {
 着急用的用户可以购买独享账户（一直都是你的）或者去租一个，不着急等第下次更新新的免费Apple ID
 
 <div class="buy-btn"> 
-    <a href="https://shop.muooy.com/" target="_blank" rel="noreferrer"><el-button color="#3366ff" :dark="isDark">购买独享ID</el-button></a>    <a href="https://shop.muooy.com/buy/21" target="_blank" rel="noreferrer"><el-button color="#3366ff" :dark="isDark">租借临时账号</el-button></a>
+    <a href="https://shop.muooy.com/" target="_blank" rel="noreferrer"><el-button color="#3366ff" :dark="isDark">购买独享ID（优惠码：juzixp）</el-button></a>    <a href="https://shop.muooy.com/buy/21" target="_blank" rel="noreferrer"><el-button color="#3366ff" :dark="isDark">租借临时账号</el-button></a>
 </div>
 
 ## 免费共享账户列表
