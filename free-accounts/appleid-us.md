@@ -6,15 +6,17 @@ description: 分享最新可用苹果美区账号，立即获取最新免费美�
 <script setup>
 import { ref, onMounted } from 'vue'; // 引入 ref 和 onMounted
 import { ElMessage } from 'element-plus'
+import accountsList from '../components/free-accounts/accountsList.vue'
 
 // 初始数据，这些是基础的账号和密码，不包含时间
 const initialAccounts = [
-  { account: 'wiboydgugq@outlook.com', password: 'TD3nDeSVhAUg' },
-  { account: 'theedj6flores@outlook.com', password: 'TDCw9Y4wsXqx' },
-  { account: 'charlesbfpriveraxdx@gmail.com', password: 'TDsYV59Wnqfz' },
-  { account: 'toddcopthorne@mail.com', password: 'CwF@FAM6' },
-  { account: 'steverlarson0y039@gmail.com', password: 'Eg68Kd52' },
-  { account: 'lancerowe15958@gmail.com', password: 'Te37Ku42' },
+  { account: 'abnercathy1269@gmail.com', password: 'tta9EmkB6Q',status: '正常' },
+  { account: 'theedj6flores@outlook.com', password: 'TDCw9Y4wsXqx',status: '正常'  },
+  { account: 'charlesbfpriveraxdx@gmail.com', password: 'TDsYV59Wnqfz',status: '正常'  },
+  { account: 'toddcopthorne@mail.com', password: 'CwF@FAM6',status: '正常'  },
+  { account: 'steverlarson0y039@gmail.com', password: 'Eg68Kd52' ,status: '正常' },
+  { account: 'lancerowe15958@gmail.com', password: 'Te37Ku42' ,status: '异常' },
+  { account: 'agang130902783116@icloud.com', password: 'Dd12aba11' ,status: '异常' },
   // ... 可以添加更多初始账号
 ];
 
@@ -29,7 +31,7 @@ const STORED_ACCOUNTS_KEY = 'storedAppleIdAccounts'; // localStorage 存储已�
  * @param {number} daysAgo - 随机时间距离当前的最大天数
  * @returns {Date} 随机生成的日期对象
  */
-  const getRandomRecentTime = (daysAgo) => {
+    const getRandomRecentTime = (daysAgo) => {
     const now = new Date();
     const targetDate = new Date(now.getTime() - daysAgo * 24 * 60 * 60 * 1000); // daysAgo 天前的日期
 
@@ -54,7 +56,7 @@ const STORED_ACCOUNTS_KEY = 'storedAppleIdAccounts'; // localStorage 存储已�
  * @param {Date} date - 日期对象
  * @returns {string} 格式化后的日期时间字符串
  */
- const formatDateTime = (date) => {
+  const formatDateTime = (date) => {
     const year = date.getFullYear();
     const month = String(date.getMonth() + 1).padStart(2, '0');
     const day = String(date.getDate()).padStart(2, '0');
@@ -62,12 +64,12 @@ const STORED_ACCOUNTS_KEY = 'storedAppleIdAccounts'; // localStorage 存储已�
     const minutes = String(date.getMinutes()).padStart(2, '0');
     const seconds = String(date.getSeconds()).padStart(2, '0');
     return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
- };
+  };
 
 /**
  * 生成并更新账号列表的时间，并存储到 localStorage
  */
- const generateAndStoreAccounts = () => {
+  const generateAndStoreAccounts = () => {
     accounts.value = initialAccounts.map(account => {
     // 随机选择最近1天或2天前的日期进行随机化
     const randomDaysAgo = Math.random() < 0.5 ? 1 : 2; // 50% 概率是1天前，50% 概率是2天前
@@ -80,7 +82,7 @@ const STORED_ACCOUNTS_KEY = 'storedAppleIdAccounts'; // localStorage 存储已�
     // 存储最新的更新时间戳和带有时间的账号列表
     localStorage.setItem(LAST_UPDATE_TIME_KEY, Date.now().toString());
     localStorage.setItem(STORED_ACCOUNTS_KEY, JSON.stringify(accounts.value));
- };
+  };
 
 // 组件挂载时执行逻辑
 onMounted(() => {
@@ -114,7 +116,7 @@ onMounted(() => {
     }
   } else {
     // 第一次访问或没有记录，立即生成并存储
-  
+
     generateAndStoreAccounts();
   }
 });
@@ -124,7 +126,7 @@ onMounted(() => {
  * @param {string} email - 原始邮箱地址
  * @returns {string} 遮掩后的邮箱地址
  */
-  const maskAccountPrefix = (email) => {
+    const maskAccountPrefix = (email) => {
     const atIndex = email.indexOf('@');
     if (atIndex === -1) {
     return email; // 如果不是邮箱格式，直接返回
@@ -166,16 +168,13 @@ const copyPassword = (password) => {
 };
 </script>
 
-![](https://img.muooy.com/img/1/2025/06/27/685e58601efd5.webp)
-
-
-<h2 style="text-align: center;"><span style="color: #ff0000;"><strong>2025年6月最新苹果美区账号 APPLE ID 免费账号共享</strong></span></h2>
+<h1 style="text-align: center;"><span style="color: #ff0000;"><strong>2025年6月最新苹果美区账号 APPLE ID 免费账号共享</strong></span></h1>
 
 每日更新，最新美区 Apple ID 限时共享！我们致力于为您提供**实时可用**的美国区 Apple ID 账户，并进行**严格的有效性检测**。通过这些美区账号，您可以轻松登录 App Store，**畅享下载美区独有的应用程序**，探索更广阔的数字世界。立即获取，体验无界应用！
 
 ---
 
-::: danger 警告
+::: danger 
 
  使用免费共享苹果账号必须从App Store 登录，千万不要登录「iCloud」跟「设置」，否则可能导致锁机或者隐私泄漏，手机被锁我们也无能为力！
 
@@ -185,44 +184,47 @@ const copyPassword = (password) => {
 
 ---
 
-推荐1：苹果美国/日本/香港/台湾/英国等地区APPLE ID独享账号[【点击进入购买】](https://shop.muooy.com)
+<strong><span style="color: #ff0000;">推荐1：</span>苹果美国/日本/香港/台湾/英国等地区APPLE ID独享账号<span class="md-meta-i-c md-link"><a href="https://shop.muooy.com/"><span class="md-plain">【点击进入购买】</span></a></span></strong>
 
-推荐2：已购Shadowrocket（小火箭）独享账号[【点击进入购买】](https://shop.muooy.com/buy/15)
+<strong><span style="color: #3366ff;">推荐2：</span>已购Shadowrocket（小火箭）独享账号<span class="md-meta-i-c md-link"><a href="https://shop.muooy.com/buy/15"><span class="md-plain">【点击进入购买】</span></a></span></strong>
 
-推荐3：已购Shadowrocket（小火箭）共享账号[【点击进入购买】](https://shop.muooy.com/buy/21)
+<strong><span style="color: #ff6600;">推荐3：</span>已购Shadowrocket（小火箭）共享账号<span class="md-meta-i-c md-link md-expand"><a href="https://shop.muooy.com/buy/21"><span class="md-plain">【点击进入购买】</span></a></span></strong>
+
 
 ## 免费共享账户列表
 
+<accountsList :accounts="accounts" />
+
 <!-- 这里使用 v-for 渲染动态表格 -->
-<table class="account-table">
+<!-- <table class="account-table">
   <thead>
     <tr>
       <th>账户</th>
       <th>密码</th>
       <th>更新时间</th>
-      <th colspan="2">操作</th> <!-- 操作列合并2个单元格 -->
+      <th colspan="2">操作</th> 
     </tr>
   </thead>
   <tbody>
     <tr v-for="account in accounts" :key="account.account">
       <td>{{ maskAccountPrefix(account.account) }}</td>
-      <td>{{ '*'.repeat(account.password.length) }}</td> <!-- 密码遮掩显示 -->
+      <td>{{ '*'.repeat(account.password.length) }}</td> 
       <td>{{ account.updateTime }}</td>
       <td>
         <el-button type="primary" @click="copyAccount(account.account)">复制账户</el-button>
-        <!-- <button @click="copyAccount(account.account)" class="copy-button copy-account-btn">复制账户</button> -->
       </td>
       <td>
         <el-button type="success" @click="copyPassword(account.password)">复制密码</el-button>
-        <!-- <button @click="copyPassword(account.password)" class="copy-button copy-password-btn">复制密码</button> -->
       </td>
     </tr>
   </tbody>
-</table>
+</table> -->
 
 
 
 ## 登录步骤说明
+![](https://img.muooy.com/img/1/2025/06/27/685e58601efd5.webp)
+
 
 1. **注意：** 仅`只能从App Store商店中登录`，切勿使用iCloud/设置中登录，`否则可能导致锁机`，如有用户操作不当登录设置导致手机被锁本站一概不负责，均由用户自行承担。
 2. 打开 `App Store`，点击右上角头`像` → 划到最底部`退出原账号` → 输入新账号密码登录；

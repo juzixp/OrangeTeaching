@@ -6,14 +6,15 @@ description: 2025年6月最新免费共享Shadowrocket（小火箭）美区已�
 <script setup>
 import { ref, onMounted } from 'vue'; // 引入 ref 和 onMounted
 import { ElMessage } from 'element-plus'
+import accountsList from '../components/free-accounts/accountsList.vue'
 
 // 初始数据，这些是基础的账号和密码，不包含时间
 const initialAccounts = [
-  { account: 'wyattgibbsjaydin@gmail.com', password: 'ti!M9d3q' },
-  { account: 'youz@juzixp.top', password: 'ltYhzMvwE%S9g@' },
-  { account: 'SalinasAugustF2j2Wg@usa.com', password: 'g8epdMBz4U' },
-  { account: '3592376770@qq.com', password: 'VCBentu6DX' },
-  { account: 'matthewmcbailey0j@gmail.com', password: 'AHjaPam7wS' },
+  { account: 'wyattgibbsjaydin@gmail.com', password: 'ti!M9d3q',status: '正常' },
+  { account: 'SalinasAugustF2j2Wg@usa.com', password: 'g8epdMBz4U',status: '正常' },
+  { account: '3592376770@qq.com', password: 'VCBentu6DX',status: '正常' },
+  { account: 'matthewmcbailey0j@gmail.com', password: 'AHjaPam7wS' ,status: '正常'},
+  { account: 'kenneth.sheehanmas@icloud.co', password: 'AHjaPam7wS' ,status: '异常'},
   // ... 可以添加更多初始账号
 ];
 
@@ -165,15 +166,15 @@ const copyPassword = (password) => {
 };
 </script>
 
-![](https://img.muooy.com/img/1/2025/06/27/685e58601efd5.webp)
 
-<h2 style="text-align: center;"><span style="color: #ff0000;"><strong>2025年6月最新免费Shadowrocket下载/已购小火箭免费共享Apple ID账号</strong></span></h2>
+
+<h1 style="text-align: center;"><span style="color: #ff0000;"><strong>2025年6月最新免费Shadowrocket下载/已购小火箭免费共享Apple ID账号</strong></span></h1>
 
 每日更新，最新免费shadowrocket下载/已购小火箭免费共享Apple ID！我们致力于为您提供**实时可用**的美国shadowrocket已购小火箭 Apple ID 账户，并进行**严格的有效性检测**。通过这些账号，您可以轻松登录 App Store，**免费下载Shadowrocket应用程序**，探索更广阔的数字世界。立即获取，体验无界应用！
 
 ---
 
-::: danger 警告
+::: danger
 
  使用已购Shadowrocket小火箭苹果免费共享账号必须从App Store 登录，千万不要登录「iCloud」跟「设置」，否则可能导致锁机或者隐私泄漏，手机被锁我们也无能为力！
 
@@ -183,44 +184,19 @@ const copyPassword = (password) => {
 
 ---
 
-推荐1：苹果美国/日本/香港/台湾/英国等地区APPLE ID独享账号[【点击进入购买】](https://shop.muooy.com)
+<strong><span style="color: #ff0000;">推荐1：</span>苹果美国/日本/香港/台湾/英国等地区APPLE ID独享账号<span class="md-meta-i-c md-link"><a href="https://shop.muooy.com/"><span class="md-plain">【点击进入购买】</span></a></span></strong>
 
-推荐2：已购Shadowrocket（小火箭）独享账号[【点击进入购买】](https://shop.muooy.com/buy/15)
+<strong><span style="color: #3366ff;">推荐2：</span>已购Shadowrocket（小火箭）独享账号<span class="md-meta-i-c md-link"><a href="https://shop.muooy.com/buy/15"><span class="md-plain">【点击进入购买】</span></a></span></strong>
 
-推荐3：已购Shadowrocket（小火箭）共享苹果账号[【点击进入购买】](https://shop.muooy.com/buy/21)
+<strong><span style="color: #ff6600;">推荐3：</span>已购Shadowrocket（小火箭）共享账号<span class="md-meta-i-c md-link md-expand"><a href="https://shop.muooy.com/buy/21"><span class="md-plain">【点击进入购买】</span></a></span></strong>
 
 ## 免费共享账户列表
 
-<!-- 这里使用 v-for 渲染动态表格 -->
-<table class="account-table">
-  <thead>
-    <tr>
-      <th>账户</th>
-      <th>密码</th>
-      <th>更新时间</th>
-      <th colspan="2">操作</th> <!-- 操作列合并2个单元格 -->
-    </tr>
-  </thead>
-  <tbody>
-    <tr v-for="account in accounts" :key="account.account">
-      <td>{{ maskAccountPrefix(account.account) }}</td>
-      <td>{{ '*'.repeat(account.password.length) }}</td> <!-- 密码遮掩显示 -->
-      <td>{{ account.updateTime }}</td>
-      <td>
-        <el-button type="primary" @click="copyAccount(account.account)">复制账户</el-button>
-        <!-- <button @click="copyAccount(account.account)" class="copy-button copy-account-btn">复制账户</button> -->
-      </td>
-      <td>
-        <el-button type="success" @click="copyPassword(account.password)">复制密码</el-button>
-        <!-- <button @click="copyPassword(account.password)" class="copy-button copy-password-btn">复制密码</button> -->
-      </td>
-    </tr>
-  </tbody>
-</table>
-
+<accountsList :accounts="accounts" />
 
 
 ## 登录步骤说明
+![](https://img.muooy.com/img/1/2025/06/27/685e58601efd5.webp)
 
 1. **注意：** 仅`只能从App Store商店中登录`，切勿使用iCloud/设置中登录，`否则可能导致锁机`，如有用户操作不当登录设置导致手机被锁本站一概不负责，均由用户自行承担。
 2. 打开 `App Store`，点击右上角头`像` → 划到最底部`退出原账号` → 输入新账号密码登录；

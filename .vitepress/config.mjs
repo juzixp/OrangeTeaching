@@ -22,7 +22,7 @@ export default defineConfig({
     logo: '/logo.png',
     socialLinks: [//导航栏图标
       { icon: 'telegram', link: 'https://t.me/juzixp' },
-      { icon: 'github', link: 'https://github.com/juzixp/OrangeTeaching' }
+      // { icon: 'github', link: 'https://github.com/juzixp/OrangeTeaching' }
     ],
     search: { //搜索
       provider: 'local'
@@ -69,10 +69,10 @@ export default defineConfig({
           prev: '上一页',
           next: '下一页'
         },
-        editLink: { //编辑链接
-          pattern: 'https://github.com/juzixp/OrangeTeaching/edit/main/:path',
-          text: '在 GitHub 上编辑此页面'
-        }
+        // editLink: { //编辑链接
+        //   pattern: 'https://github.com/juzixp/OrangeTeaching/edit/main/:path',
+        //   text: '在 GitHub 上编辑此页面'
+        // }
       },
     },
     en: {
@@ -104,9 +104,9 @@ export default defineConfig({
           '/en/tutorials/': getTutorialsSidebarEnUs(),
           '/en/free-accounts/': getFreeAccountsSidebarEnUs(),
         },
-        editLink: { //编辑链接
-          pattern: 'https://github.com/juzixp/OrangeTeaching/edit/main/:path',
-        }
+        // editLink: { //编辑链接
+        //   pattern: 'https://github.com/juzixp/OrangeTeaching/edit/main/:path',
+        // }
       },
     }
   }
