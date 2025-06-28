@@ -202,7 +202,7 @@ const copyPassword = (password) => {
 2. 打开 `App Store`，点击右上角头`像` → 划到最底部`退出原账号` → 输入新账号密码登录；
 3. 登录时选择"其他选项" → "`不升级`"。
 4. 搜索需要下载的软件名称Shadowrocket全称下载，如下图
-5. [点此阅读更详细的登录步骤说明](/guide/login-app-store.html)
+5. [点此阅读苹果共享账户登录App Store步骤](/guide/apple-shared-id-login-app-store.html)
 
 ![免费Shadowrocket账户登录步骤](https://img.muooy.com/img/1/2025/06/27/685e600e8fa0f.webp)
 

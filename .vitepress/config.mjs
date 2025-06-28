@@ -119,10 +119,10 @@ function getGuideSidebarZhCN() {
     {
       text: 'Apple 指南',
       items: [
-        {
-          text: '如何登录App Store使用', link: '/guide/login-app-store',
-        },
-        { text: '苹果账号邮箱/密码/安全问题的修改方法', link: '/guide/AppleIdUpdate' }
+        { text: '如何登录App Store使用', link: '/guide/login-app-store', },
+        { text: '苹果账号邮箱/密码/安全问题修改方法', link: '/guide/AppleIdUpdate' },
+        { text: '苹果共享账户登录App Store步骤', link: '/guide/apple-shared-id-login-app-store' },
+        { text: '苹果Apple ID关闭双重认证方法', link: '/guide/apple-id-turn-off-2fa' }
       ]
     },
     {
