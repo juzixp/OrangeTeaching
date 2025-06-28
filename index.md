@@ -1,7 +1,7 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
-
+titleTemplate: 探索无限可能，尽享全球数字内容！
 hero:
   name: "果学坊"
   #text: "探索无限可能，尽享全球数字内容！"
