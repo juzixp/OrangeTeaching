@@ -9,11 +9,16 @@
         <div class="account-name">
           账号: {{ maskAccountPrefix(account.account) }}
         </div>
-        <div
-          class="account-status"
-          :class="account.status === '正常' ? 'normal' : 'abnormal'"
-        >
-          状态: {{ account.status }}
+        <div class="account-status">
+          状态:
+          <span
+            :class="
+              account.status === '正常'
+                ? 'account-status-normal'
+                : 'account-status-abnormal'
+            "
+            >{{ account.status }}</span
+          >
         </div>
         <div class="check-time">检测时间: {{ account.updateTime }}</div>
       </div>
@@ -90,15 +95,15 @@ const maskAccountPrefix = (email) => {
   display: flex;
   flex-direction: column;
   padding: 16px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--vp-c-divider);
   border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background-color: var(--vp-c-bg);
+  box-shadow: 0 2px 4px var(--vp-c-shadow-1);
   transition: all 0.3s ease;
 }
 
 .account-item:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px var(--vp-c-shadow-2);
 }
 
 .account-info {
@@ -108,21 +113,21 @@ const maskAccountPrefix = (email) => {
 
 .account-name {
   font-weight: bold;
-  color: #333;
+  color: var(--vp-c-text-1);
 }
 
 .account-status {
   font-size: 0.9em;
 }
-.account-status.normal {
-  color: #4caf50;
+.account-status-normal {
+  color: #4caf50; /* 绿色 */
 }
-.account-status.abnormal {
-  color: #f44336;
+.account-status-abnormal {
+  color: #f44336; /* 红色 */
 }
 
 .check-time {
-  color: #666;
+  color: var(--vp-c-text-2);
   font-size: 0.8em;
 }
 
@@ -134,17 +139,18 @@ const maskAccountPrefix = (email) => {
 
 button {
   padding: 8px 16px;
-  background-color: #f5f5f5;
-  border: 1px solid #ddd;
+  background-color: var(--vp-c-mute);
+  border: 1px solid var(--vp-c-divider);
   border-radius: 6px;
   cursor: pointer;
   font-size: 0.9em;
   transition: all 0.2s;
+  color: var(--vp-c-text-1);
 }
 
 button:hover {
-  background-color: #e9e9e9;
-  border-color: #ccc;
+  background-color: var(--vp-c-mute-dark);
+  border-color: var(--vp-c-divider-dark);
 }
 
 @media (max-width: 768px) {
