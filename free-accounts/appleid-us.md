@@ -201,7 +201,7 @@ const maskAccountPrefix = (email) => {
 着急用的用户可以购买独享账户（一直都是你的）或者去租一个，不着急等第下次更新新的免费Apple ID
 
 
-<el-row :gutter="24" :justify="center">
+<el-row :gutter="24">
     <el-col style="text-align: center;" :span="12" :xs="24">
       <a href="https://shop.muooy.com/" target="_blank" rel="noreferrer"><el-button color="#3366ff" :dark="isDark">购买独享ID（优惠码：juzixp）</el-button></a>
     </el-col>

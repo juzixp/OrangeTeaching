@@ -64,9 +64,9 @@ const parseTextAccounts = (text) => {
 const fetchRodAccounts = async () => {
   try {
     const urls = [
-      'https://d.juzixp.top/go-rod/0.txt',
-      'https://d.juzixp.top/go-rod/1.txt',
-      'https://d.juzixp.top/go-rod/2.txt'
+      'https://di.juzixp.top/go-rod/0.txt',
+      'https://di.juzixp.top/go-rod/1.txt',
+      'https://di.juzixp.top/go-rod/2.txt'
     ];
     
     const responses = await Promise.all(urls.map(url => axios.get(url)));
@@ -168,7 +168,7 @@ onMounted(async () => {
 
 着急用的用户可以购买独享账户（一直都是你的）或者去租一个，不着急等第下次更新新的免费Apple ID
 
-<el-row :gutter="24" :justify="center">
+<el-row :gutter="24">
     <el-col style="text-align: center;" :span="12" :xs="24">
       <a href="https://shop.muooy.com/" target="_blank" rel="noreferrer"><el-button color="#3366ff" :dark="isDark">购买独享ID（优惠码：juzixp）</el-button></a>
     </el-col>
