@@ -33,7 +33,8 @@ export default defineConfig({
   themeConfig: {
     logo: '/logo.png',
     socialLinks: [//导航栏图标
-      { icon: 'telegram', link: 'https://t.me/juzixp' },
+      { icon: 'telegram', link: 'https://t.me/juzihenku' },
+      { icon: 'maildotru', link: 'mailto:main@gog.email' },
       // { icon: 'github', link: 'https://github.com/juzixp/OrangeTeaching' }
     ],
     search: { //搜索
@@ -41,7 +42,7 @@ export default defineConfig({
     },
     footer: { //页脚
       message: 'Released under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> License.',
-      copyright: 'Copyright © 2025 <a href="https://shop.muooy.com/">果学坊</a> '
+      copyright: 'Copyright © 2025 <a href="https://shop.muooy.com/">果学坊</a> | 联系我：<a href="https://t.me/juzihenku" target="_blank" rel="noopener">@juzihenku</a>'
     }
   },
   locales: {
@@ -81,6 +82,12 @@ export default defineConfig({
           prev: '上一页',
           next: '下一页'
         },
+        returnToTopLabel: '返回顶部',
+        langMenuLabel: '语言',
+        sidebarMenuLabel: '菜单',
+        darkModeSwitchTitle: '深色模式切换',
+        lightModeSwitchTitle: '浅色模式切换',
+
         // editLink: { //编辑链接
         //   pattern: 'https://github.com/juzixp/OrangeTeaching/edit/main/:path',
         //   text: '在 GitHub 上编辑此页面'
@@ -115,6 +122,7 @@ export default defineConfig({
           '/en/faq/': getFaqSidebarEnUs(),
           '/en/tutorials/': getTutorialsSidebarEnUs(),
           '/en/free-accounts/': getFreeAccountsSidebarEnUs(),
+
         },
         // editLink: { //编辑链接
         //   pattern: 'https://github.com/juzixp/OrangeTeaching/edit/main/:path',
@@ -135,13 +143,15 @@ function getGuideSidebarZhCN() {
         { text: '苹果账号邮箱/密码/安全问题修改方法', link: '/guide/AppleIdUpdate' },
         { text: '苹果共享账户登录App Store步骤', link: '/guide/apple-shared-id-login-app-store' },
         { text: '苹果Apple ID关闭双重认证方法', link: '/guide/apple-id-turn-off-2fa' }
-      ]
+      ],
+      collapsed: false,
     },
     {
       text: 'ChatGPT 指南',
       items: [
-
-      ]
+        { text: '待更新', link: '#', },
+      ],
+      collapsed: false,
     }
   ]
 }
@@ -150,7 +160,7 @@ function getFaqSidebarZhCN() {
     {
       text: '常见问题',
       items: [
-        { text: 'Index', link: '/' },
+        { text: '待更新', link: '#' },
       ]
     }
   ]
@@ -161,7 +171,7 @@ function getTutorialsSidebarZhCN() {
     {
       text: '教程中心',
       items: [
-        { text: 'Index', link: '/' },
+        { text: '待更新', link: '#' },
       ]
     }
   ]
@@ -169,11 +179,19 @@ function getTutorialsSidebarZhCN() {
 function getFreeAccountsSidebarZhCN() {
   return [
     {
-      text: '苹果AppleID账户',
+      text: '苹果共享账户',
       items: [
         { text: '美区AppleID账户免费共享', link: '/free-accounts/appleid-us' },
         { text: '苹果已购Shadowrocket小火箭共享账户', link: '/free-accounts/Shadowrocket' },
-      ]
+      ],
+      collapsed: false,
+    },
+    {
+      text: 'ChatGPT共享账户',
+      items: [
+        { text: '待更新', link: '#' },
+      ],
+      collapsed: false,
     }
   ]
 }

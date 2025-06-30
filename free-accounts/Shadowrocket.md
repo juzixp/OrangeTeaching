@@ -162,7 +162,7 @@ onMounted(async () => {
 
 <strong><span style="color: #ff0000;">推荐1：</span>苹果美国/日本/香港/台湾/英国等地区APPLE ID独享账号<span class="md-meta-i-c md-link"><a href="https://shop.muooy.com/" target="_blank" rel="noreferrer"><span class="md-plain">【点击进入购买】</span></a></span></strong>
 
-<strong><span style="color: #3366ff;">推荐2：</span>已购Shadowrocket（小火箭）独享账号<span class="md-meta-i-c md-link"><a href="https://shop.muooy.com/buy/15" target="_blank" rel="noreferrer"><span class="md-plain">【点击进入购买】</span></a></span></strong>
+<strong><span style="color: #3366ff;">推荐2：</span>已购Shadowrocket（小火箭）独享成品账号<span class="md-meta-i-c md-link"><a href="https://shop.muooy.com/buy/15" target="_blank" rel="noreferrer"><span class="md-plain">【点击进入购买】</span></a></span></strong>
 
 <strong><span style="color: #ff6600;">推荐3：</span>已购Shadowrocket（小火箭）共享账号<span class="md-meta-i-c md-link md-expand"><a href="https://shop.muooy.com/buy/21" target="_blank" rel="noreferrer"><span class="md-plain">【点击进入购买】</span></a></span></strong>
 

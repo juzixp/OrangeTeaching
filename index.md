@@ -13,6 +13,9 @@ hero:
     - theme: alt
       text: 查看文档
       link: /guide/
+    - theme: alt
+      text: 联系我
+      link: https://t.me/juzihenku
 
 features:
   - icon: 📦
