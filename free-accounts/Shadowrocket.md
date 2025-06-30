@@ -4,166 +4,142 @@ description: 获取最新免费小火箭Shadowrocket共享账号与已购美区A
 ---
 
 <script setup>
-import { ref, onMounted } from 'vue'; // 引入 ref 和 onMounted
+import { ref, onMounted } from 'vue';
+import axios from 'axios';
 import { ElMessage } from 'element-plus'
 import accountsList from '../components/free-accounts/accountsList.vue'
 
-// 初始数据，这些是基础的账号和密码，不包含时间
+// 初始账号数据
 const initialAccounts = [
-  { account: 'shenhouyun.com_12@ICLOUD.COM', password: 'shenhouyun.CC_jAAzSmc7sS',status: '正常' },
-  { account: 'nb666666.com_1@icloud.com', password: 'shenhouyun.CC_qthN8y7ZdM',status: '正常' },
-  { account: 'FX88888888.COM_1@ICLOUD.COM', password: 'shenhouyun.COM_m67hTVTBNM',status: '正常' },
-  { account: 'matthewmcbailey0j@gmail.com', password: 'AHjaPam7wS' ,status: '正常'},
-  { account: 'kenneth.sheehanmas@icloud.com', password: 'AHjaPam7wS' ,status: '正常'},
-  // ... 可以添加更多初始账号
+  { account: 'shenhouyun.com_12@ICLOUD.COM', password: 'shenhouyun.CC_jAAzSmc7sS', status: '正常' },
+  { account: 'nb666666.com_1@icloud.com', password: 'shenhouyun.CC_qthN8y7ZdM', status: '正常' },
+  { account: 'FX88888888.COM_1@ICLOUD.COM', password: 'shenhouyun.COM_m67hTVTBNM', status: '正常' },
+  { account: 'matthewmcbailey0j@gmail.com', password: 'AHjaPam7wS', status: '正常'},
+  { account: 'kenneth.sheehanmas@icloud.com', password: 'AHjaPam7wS', status: '正常'},
 ];
 
-// 用于在模板中渲染的响应式账号列表，包含 updateTime
 const accounts = ref([]);
+const isLoading = ref(false);
 
-const LAST_UPDATE_TIME_KEY = 'lastAppleIdUpdateTime2'; // localStorage 存储上次更新的时间戳
-const STORED_ACCOUNTS_KEY = 'storedAppleIdAccounts2'; // localStorage 存储已生成时间的账号列表
+const LAST_UPDATE_TIME_KEY = 'lastAppleIdUpdateTime2';
+const STORED_ACCOUNTS_KEY = 'storedAppleIdAccounts2';
 
-/**
- * 获取一个在指定天数范围内的随机日期时间
- * @param {number} daysAgo - 随机时间距离当前的最大天数
- * @returns {Date} 随机生成的日期对象
- */
-    const getRandomRecentTime = (daysAgo) => {
-    const now = new Date();
-    const targetDate = new Date(now.getTime() - daysAgo * 24 * 60 * 60 * 1000); // daysAgo 天前的日期
-
-  // 随机生成一个介于 targetDate 和 now 之间的毫秒数
-  const randomMs = targetDate.getTime() + Math.random() * (now.getTime() - targetDate.getTime());
-  const randomDate = new Date(randomMs);
-
-  // 确保时间在上午12点（0点，即午夜）到晚上24点（23点，即午夜前）之间
-  const randomHour = Math.floor(Math.random() * 24); // 0-23
-  const randomMinute = Math.floor(Math.random() * 60); // 0-59
-  const randomSecond = Math.floor(Math.random() * 60); // 0-59
-
-  randomDate.setHours(randomHour);
-  randomDate.setMinutes(randomMinute);
-  randomDate.setSeconds(randomSecond);
-
-  return randomDate;
+// 解析文本格式账号数据
+const parseTextAccounts = (text) => {
+  const accounts = [];
+  const blocks = text.split('\n\n');
+  
+  blocks.forEach(block => {
+    if (!block.trim()) return;
+    
+    const lines = block.split('\n');
+    const account = {};
+    
+    lines.forEach(line => {
+      const [key, value] = line.split(':').map(s => s.trim());
+      if (key && value) {
+        if (key === '账号状态') account.status = value === '正常' ? '正常' : '异常';
+        else if (key === '国家') account.country = value;
+        else if (key === '账号') account.account = value;
+        else if (key === '密码') account.password = value;
+        else if (key === '更新时间') account.updateTime = value.split(' +')[0];
+      }
+    });
+    
+    if (account.account && account.password) {
+      accounts.push({
+        account: account.account,
+        password: account.password,
+        status: account.status || '正常',
+        updateTime: account.updateTime || new Date().toISOString(),
+        fromAPI: true
+      });
+    }
+  });
+  
+  return accounts;
 };
 
-/**
- * 格式化日期时间为 YYYY-MM-DD HH:mm:ss
- * @param {Date} date - 日期对象
- * @returns {string} 格式化后的日期时间字符串
- */
-    const formatDateTime = (date) => {
-    const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, '0');
-    const day = String(date.getDate()).padStart(2, '0');
-    const hours = String(date.getHours()).padStart(2, '0');
-    const minutes = String(date.getMinutes()).padStart(2, '0');
-    const seconds = String(date.getSeconds()).padStart(2, '0');
-    return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
-    };
+// 从代理API获取go-rod账号数据
+const fetchRodAccounts = async () => {
+  try {
+    const urls = [
+      '/api/go-rod/go-rod/0.txt',
+      '/api/go-rod/go-rod/1.txt',
+      '/api/go-rod/go-rod/2.txt'
+    ];
+    
+    const responses = await Promise.all(urls.map(url => axios.get(url)));
+    return responses.flatMap(response => 
+      parseTextAccounts(response.data)
+    );
+  } catch (error) {
+    console.error('获取go-rod账号失败:', error);
+    return [];
+  }
+};
 
-/**
- * 生成并更新账号列表的时间，并存储到 localStorage
- */
-    const generateAndStoreAccounts = () => {
-    accounts.value = initialAccounts.map(account => {
-    // 随机选择最近1天或2天前的日期进行随机化
-    const randomDaysAgo = Math.random() < 0.5 ? 1 : 2; // 50% 概率是1天前，50% 概率是2天前
-    const randomDateTime = getRandomRecentTime(randomDaysAgo);
-    return {
-      ...account,
-      updateTime: formatDateTime(randomDateTime)
-    };
-    });
-    // 存储最新的更新时间戳和带有时间的账号列表
-    localStorage.setItem(LAST_UPDATE_TIME_KEY, Date.now().toString());
-    localStorage.setItem(STORED_ACCOUNTS_KEY, JSON.stringify(accounts.value));
-    };
+// 从API获取额外账号数据
+const fetchAdditionalAccounts = async () => {
+  try {
+    const urls = [
+      'https://idshare001.me/node/getid.php?getid=1',
+      'https://idshare001.me/node/getid.php?getid=2'
+    ];
+    
+    const responses = await Promise.all(urls.map(url => axios.get(url)));
+    return responses.flatMap(response => 
+      response.data.map(item => ({
+        account: item.username,
+        password: item.password,
+        status: item.status === 1 ? '正常' : '异常',
+        updateTime: item.time,
+        fromAPI: true
+      }))
+    );
+  } catch (error) {
+    console.error('获取额外账号失败:', error);
+    return [];
+  }
+};
 
 // 组件挂载时执行逻辑
-onMounted(() => {
+onMounted(async () => {
+  isLoading.value = true;
+  
+  // 加载本地账号
   const lastUpdateTime = localStorage.getItem(LAST_UPDATE_TIME_KEY);
   const storedAccounts = localStorage.getItem(STORED_ACCOUNTS_KEY);
-  const sixHoursInMs = 6 * 60 * 60 * 1000; // 6小时的毫秒数
 
   if (lastUpdateTime && storedAccounts) {
-    const lastUpdateTimestamp = parseInt(lastUpdateTime, 10);
-    // 如果距离上次更新已超过6小时，则生成新的
-    if (Date.now() - lastUpdateTimestamp > sixHoursInMs) {
-      
-      generateAndStoreAccounts();
-    } else {
-      // 否则，加载并使用 localStorage 中存储的账号数据
-      
-      try {
-        const parsedStoredAccounts = JSON.parse(storedAccounts);
-        // 检查存储的账号数量和具体账号/密码是否与 initialAccounts 匹配
-        if (parsedStoredAccounts.length === initialAccounts.length &&
-            parsedStoredAccounts.every((sa, i) => sa.account === initialAccounts[i].account && sa.password === initialAccounts[i].password)) {
-            accounts.value = parsedStoredAccounts;
-        } else {
-            console.warn('存储的账号列表与当前配置不匹配，重新生成时间。');
-            generateAndStoreAccounts();
-        }
-      } catch (e) {
-        console.error('解析存储的账号数据失败或数据不一致，重新生成。', e);
-        generateAndStoreAccounts();
-      }
+    try {
+      accounts.value = JSON.parse(storedAccounts);
+    } catch (e) {
+      console.error('解析存储的账号数据失败:', e);
+      accounts.value = initialAccounts;
     }
   } else {
-    // 第一次访问或没有记录，立即生成并存储
+    accounts.value = initialAccounts;
+  }
 
-    generateAndStoreAccounts();
+  // 获取API账号数据
+  try {
+    const [apiAccounts, rodAccounts] = await Promise.all([
+      fetchAdditionalAccounts(),
+      fetchRodAccounts()
+    ]);
+    
+    // 合并所有API账号到本地账号前面
+    const allApiAccounts = [...apiAccounts, ...rodAccounts];
+    if (allApiAccounts.length > 0) {
+      accounts.value = [...allApiAccounts, ...accounts.value];
+    }
+  } catch (error) {
+    console.error('API账号加载失败:', error);
+  } finally {
+    isLoading.value = false;
   }
 });
-
-/**
- * 遮掩邮箱账户前缀，保留前两个字符
- * @param {string} email - 原始邮箱地址
- * @returns {string} 遮掩后的邮箱地址
- */
-    const maskAccountPrefix = (email) => {
-    const atIndex = email.indexOf('@');
-    if (atIndex === -1) {
-    return email; // 如果不是邮箱格式，直接返回
-    }
-    const prefix = email.substring(0, atIndex);
-    const domain = email.substring(atIndex);
-
-  if (prefix.length <= 2) {
-    return email; // 前缀少于等于2个字符则不遮掩
-  }
-
-  const visiblePart = prefix.substring(0, 2);
-  const maskedPart = '*'.repeat(prefix.length - 2);
-  return visiblePart + maskedPart + domain;
-};
-
-// 通用的复制函数
-const copyToClipboard = async (text, successMessage, errorMessage) => {
-  try {
-    await navigator.clipboard.writeText(text);
-    ElMessage({
-        message: successMessage,
-        type: 'success',
-    });
-  } catch (err) {
-    console.error(errorMessage, err);
-     ElMessage.error(errorMessage+ ' 请手动复制。');
-  }
-};
-
-// 复制账户的函数
-const copyAccount = (account) => {
-  copyToClipboard(account, '账户已复制到剪贴板！', '复制账户失败：');
-};
-
-// 复制密码的函数
-const copyPassword = (password) => {
-  copyToClipboard(password, '密码已复制到剪贴板！', '复制密码失败：');
-};
 </script>
 
 

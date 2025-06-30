@@ -2,6 +2,17 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  vite: {
+    server: {
+      proxy: {
+        '/api/go-rod': {
+          target: 'https://free.iosapp.icu',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api\/go-rod/, '')
+        }
+      }
+    }
+  },
   base: '/',
   cleanUrls: true,
   head: [
