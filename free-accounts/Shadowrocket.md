@@ -64,9 +64,9 @@ const parseTextAccounts = (text) => {
 const fetchRodAccounts = async () => {
   try {
     const urls = [
-      '/api/go-rod/go-rod/0.txt',
-      '/api/go-rod/go-rod/1.txt',
-      '/api/go-rod/go-rod/2.txt'
+      'https://d.juzixp.top/go-rod/0.txt',
+      'https://d.juzixp.top/go-rod/1.txt',
+      'https://d.juzixp.top/go-rod/2.txt'
     ];
     
     const responses = await Promise.all(urls.map(url => axios.get(url)));
