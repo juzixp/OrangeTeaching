@@ -1,1 +1,0 @@
-import{_ as t,c as e,o as a}from"./chunks/framework.RfVoBUZu.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"guide/test.md","filePath":"guide/test.md","lastUpdated":1750940661000}'),s={name:"guide/test.md"};function r(o,c,d,n,i,p){return a(),e("div")}const f=t(s,[["render",r]]);export{m as __pageData,f as default};
