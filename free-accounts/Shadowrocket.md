@@ -4,16 +4,26 @@ description: 获取最新免费小火箭Shadowrocket共享账号与已购美区A
 ---
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted} from 'vue';
 import axios from 'axios';
 import { ElMessage } from 'element-plus'
 import accountsList from '../components/free-accounts/accountsList.vue'
 
+
+const getCurrentYearMonth = () => {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = now.getMonth() + 1;
+  return `${year}年${month < 10 ? '' : ''}${month}月`;
+};
+
+const currentTitle = ref(getCurrentYearMonth());
+
 // 初始账号数据
 const initialAccounts = [
-  { account: 'shenhouyun.com_12@ICLOUD.COM', password: 'shenhouyun.CC_jAAzSmc7sS', status: '正常' },
-  { account: 'nb666666.com_1@icloud.com', password: 'shenhouyun.CC_qthN8y7ZdM', status: '正常' },
-  { account: 'FX88888888.COM_1@ICLOUD.COM', password: 'shenhouyun.COM_m67hTVTBNM', status: '正常' },
+  { account: 'mason9lste@outlook.com', password: 'TDCTRpW4akuU', status: '正常' },
+  { account: 'chloedvpowellgl@gmail.com', password: 'Fe6M3ZsnBA', status: '正常' },
+  { account: '1045g936c45asg@jetlf.com', password: 'Cs!X2Hvh', status: '正常' },
   { account: 'matthewmcbailey0j@gmail.com', password: 'AHjaPam7wS', status: '正常'},
   { account: 'kenneth.sheehanmas@icloud.com', password: 'AHjaPam7wS', status: '正常'},
 ];
@@ -144,19 +154,21 @@ onMounted(async () => {
 
 
 
-<h1 style="text-align: center;"><span style="color: #ff0000;"><strong>2025年6月最新免费Shadowrocket下载账号/已购小火箭免费共享Apple ID账号</strong></span></h1>
+<h1 style="text-align: center;"><span style="color: #ff0000;"><strong>{{currentTitle}}免费Shadowrocket小火箭共享账号 | 已购买小火箭免费共享Apple ID</strong></span></h1>
 
-每日更新，免费提供shadowrocket下载账号/已购买Shadowrocket小火箭的免费共享Apple ID！我们致力于为您提供**实时可用**的美区已购shadowrocket账号，并进行**严格的有效性检测**。通过这些账号，您可以轻松登录 App Store，**免费下载Shadowrocket应用程序**，探索更广阔的数字世界。立即获取，体验无界应用！
+每日更新，免费**已购Shadowrocket小火箭共享Apple ID**！我们致力于为您提供**实时可用**的shadowrocket已购付费美区账号共享，并进行**严格的有效性检测**。通过这些账号，您可以轻松登录 App Store，**免费下载Shadowrocket**应用程序，探索更广阔的数字世界。立即获取，体验无界应用！
 
 ---
 
 ::: danger
 
- 使用已购Shadowrocket小火箭苹果免费共享账号必须从App Store 登录，千万不要登录「iCloud」跟「设置」，否则可能导致锁机或者隐私泄漏，手机被锁我们也无能为力！
+ 使用**小火箭Shadowrocket苹果共享账号**必须从App Store 登录，千万不要登录「iCloud」跟「设置」，否则可能导致锁机或者隐私泄漏，手机被锁我们也无能为力！
 
 :::
 
 共享账号随时都会失效，如果无可用账号，请过几小时重新查看页面（定时维护）。
+
+如果你担心隐私问题或着急用的用户可以购买独享账户（一直都是你的）或者去租一个，不着急等第下次更新新的免费Apple ID
 
 ---
 
@@ -165,8 +177,6 @@ onMounted(async () => {
 <strong><span style="color: #3366ff;">推荐2：</span>已购Shadowrocket（小火箭）独享成品账号<span class="md-meta-i-c md-link"><a href="https://shop.muooy.com/buy/15" target="_blank" rel="noreferrer"><span class="md-plain">【点击进入购买】</span></a></span></strong>
 
 <strong><span style="color: #ff6600;">推荐3：</span>已购Shadowrocket（小火箭）共享账号<span class="md-meta-i-c md-link md-expand"><a href="https://shop.muooy.com/buy/21" target="_blank" rel="noreferrer"><span class="md-plain">【点击进入购买】</span></a></span></strong>
-
-着急用的用户可以购买独享账户（一直都是你的）或者去租一个，不着急等第下次更新新的免费Apple ID
 
 <el-row :gutter="24">
     <el-col style="text-align: center;" :span="12" :xs="24">
@@ -183,7 +193,7 @@ onMounted(async () => {
 
 
 ## 登录步骤说明
-![](https://img.muooy.com/img/1/2025/06/27/685e58601efd5.webp)
+![登录提示](https://img.muooy.com/img/1/2025/06/27/685e58601efd5.webp)
 
 1. **注意：** 仅`只能从App Store商店中登录`，切勿使用iCloud/设置中登录，`否则可能导致锁机`，如有用户操作不当登录设置导致手机被锁本站一概不负责，均由用户自行承担。
 2. 打开 `App Store`，点击右上角头`像` → 划到最底部`退出原账号` → 输入新账号密码登录；

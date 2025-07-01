@@ -9,13 +9,23 @@ import axios from 'axios';
 import { ElMessage } from 'element-plus'
 import accountsList from '../components/free-accounts/accountsList.vue'
 
+const getCurrentYearMonth = () => {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = now.getMonth() + 1;
+  return `${year}年${month < 10 ? '' : ''}${month}月`;
+};
+
+const currentTitle = ref(getCurrentYearMonth());
+
+
 // 初始数据，这些是基础的账号和密码，不包含时间
 const initialAccounts = [
-  { account: 'nb666666.com_1@icloud.com', password: 'tta9EmkB6Q',status: '正常' },
+  { account: 'abnercathy1269@gmail.com', password: '6WgdJDtxU8',status: '正常' },
   { account: 'charlesbfpriveraxdx@gmail.com', password: 'TDsYV59Wnqfz',status: '正常'  },
   { account: 'toddcopthorne@mail.com', password: 'CwF@FAM6',status: '正常'  },
-  { account: 'steverlarson0y039@gmail.com', password: 'Eg68Kd52' ,status: '异常' },
-  { account: 'lancerowe15958@gmail.com', password: 'Te37Ku42' ,status: '异常' },
+  { account: 'WeaverJohn6J5D34@uymail.com', password: '2GhcBeH6Br' ,status: '正常' },
+  { account: 'jirepa9677@virtuxis.com', password: 'G2vkspZ2aY' ,status: '正常' },
   // ... 可以添加更多初始账号
 ];
 
@@ -176,19 +186,21 @@ const maskAccountPrefix = (email) => {
 };
 </script>
 
-<h1 style="text-align: center;"><span style="color: #ff0000;"><strong>2025年6月最新苹果美区账号 APPLE ID 免费账号共享</strong></span></h1>
+<h1 style="text-align: center;"><span style="color: #ff0000;"><strong>{{currentTitle}}最新苹果美区账号 APPLE ID 免费账号共享</strong></span></h1>
 
-每日更新，最新美区 Apple ID 限时共享！我们致力于为您提供**实时可用**的美国区 Apple ID 账户，并进行**严格的有效性检测**。通过这些美区账号，您可以轻松登录 App Store，**畅享下载美区独有的应用程序**，探索更广阔的数字世界。立即获取，体验无界应用！
+每日更新，最新**美区 Apple ID** 限时共享！我们致力于为您提供**实时可用**的**美国区 Apple ID 账户**，并进行**严格的有效性检测**。通过这些美区账号，您可以轻松登录 App Store，**畅享下载美区独有的应用程序**，探索更广阔的数字世界。立即获取，体验无界应用！
 
 ---
 
 ::: danger 
 
- 使用免费共享苹果账号必须从App Store 登录，千万不要登录「iCloud」跟「设置」，否则可能导致锁机或者隐私泄漏，手机被锁我们也无能为力！
+ 使用共享苹果账号必须从App Store 登录，千万不要登录「iCloud」跟「设置」，否则可能导致锁机或者隐私泄漏，手机被锁我们也无能为力！
 
 :::
 
 共享账号随时都会失效，如果无可用账号，请过几小时重新查看页面（定时维护）。
+
+如果你担心隐私问题或着急用的用户可以购买独享账户（一直都是你的）或者去租一个，不着急等第下次更新新的免费Apple ID
 
 ---
 
@@ -197,9 +209,6 @@ const maskAccountPrefix = (email) => {
 <strong><span style="color: #3366ff;">推荐2：</span>已购Shadowrocket（小火箭）独享成品账号<span class="md-meta-i-c md-link"><a href="https://shop.muooy.com/buy/15" target="_blank" rel="noreferrer"><span class="md-plain">【点击进入购买】</span></a></span></strong>
 
 <strong><span style="color: #ff6600;">推荐3：</span>已购Shadowrocket（小火箭）共享账号<span class="md-meta-i-c md-link md-expand"><a href="https://shop.muooy.com/buy/21" target="_blank" rel="noreferrer"><span class="md-plain">【点击进入购买】</span></a></span></strong>
-
-着急用的用户可以购买独享账户（一直都是你的）或者去租一个，不着急等第下次更新新的免费Apple ID
-
 
 <el-row :gutter="24">
     <el-col style="text-align: center;" :span="12" :xs="24">
@@ -216,7 +225,7 @@ const maskAccountPrefix = (email) => {
 
 
 ## 登录步骤说明
-![](https://img.muooy.com/img/1/2025/06/27/685e58601efd5.webp)
+![登录提示](https://img.muooy.com/img/1/2025/06/27/685e58601efd5.webp)
 
 
 1. **注意：** 仅`只能从App Store商店中登录`，切勿使用iCloud/设置中登录，`否则可能导致锁机`，如有用户操作不当登录设置导致手机被锁本站一概不负责，均由用户自行承担。
