@@ -73,7 +73,7 @@ export default defineConfig({
           {
             text: '交流群',
             items: [
-              { text: 'TG交流群', link: 'https://t.me/juzixpchat' },
+              { text: 'TG交流群', link: 'https://t.me/+N2S9K9tXyUlmODI0' },
               { text: 'TG通知频道', link: 'https://t.me/juzixp' }
             ]
           },
