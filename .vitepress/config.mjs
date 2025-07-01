@@ -192,6 +192,7 @@ function getFreeAccountsSidebarZhCN() {
       items: [
         { text: '美区AppleID账户免费共享', link: '/free-accounts/appleid-us' },
         { text: '苹果已购Shadowrocket小火箭共享账户', link: '/free-accounts/Shadowrocket' },
+        { text: '日本AppleID账户免费共享', link: '/free-accounts/appleid-jp' },
       ],
       collapsed: false,
     },
