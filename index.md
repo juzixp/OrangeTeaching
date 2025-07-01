@@ -14,8 +14,12 @@ hero:
       text: 查看文档
       link: /guide/
     - theme: alt
+      text: 共享账号
+      link: /free-accounts
+    - theme: alt
       text: 联系我
       link: https://t.me/juzihenku
+      rel: external nofollow noreferrer
 
 features:
   - icon: 📦
