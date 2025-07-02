@@ -16,6 +16,7 @@ export default defineConfig({
   base: '/',
   cleanUrls: true,
   head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
     [
       'script',
       { charset: 'UTF-8', id: 'LA_COLLECT', src: '//sdk.51.la/js-sdk-pro.min.js' }
