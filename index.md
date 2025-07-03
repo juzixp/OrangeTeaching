@@ -6,6 +6,9 @@ hero:
   name: "果学坊"
   #text: "探索无限可能，尽享全球数字内容！"
   tagline: 探索无限可能，尽享全球数字内容！
+  image:
+    src: /favicon.ico
+    alt: 果学坊
   actions:
     - theme: brand
       text: 访问商店
