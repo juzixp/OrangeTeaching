@@ -1,6 +1,6 @@
 ---
-title: 最新日本苹果ID账号APPLE ID 免费账号共享
-description: 分享最新可用日本苹果AppleID账号，立即获取最新免费日区Apple ID！每日更新并亲测验证可用性，确保您能轻松下载日本区App Store独占应用。请查阅使用说明，共同维护账号可用性。
+title: 最新香港Apple ID账号共享-港区苹果id免费共享
+description: 分享最新可用的香港AppleID苹果账号，立即获取最新免费港区Apple ID！每日更新并亲测验证可用性，确保您能轻松下载香港区App Store独占应用。请查阅使用说明，共同维护账号可用性。
 ---
 
 <script setup>
@@ -22,6 +22,7 @@ const currentTitle = ref(getCurrentYearMonth());
 // 初始数据，这些是基础的账号和密码，不包含时间
 const initialAccounts = [
   { account: 'jirepa9677@virtuxis.com', password: 'G2vkspZ2aY' ,status: '正常' },
+  { account: 'eifihihyt@outlook.com', password: 'iuegh25963' ,status: '正常' },
   // ... 可以添加更多初始账号
 ];
 
@@ -29,8 +30,8 @@ const initialAccounts = [
 const accounts = ref([]);
 const isLoading = ref(false);
 
-const LAST_UPDATE_TIME_KEY = 'lastAppleIdUpdateTime4'; // localStorage 存储上次更新的时间戳
-const STORED_ACCOUNTS_KEY = 'storedAppleIdAccounts4'; // localStorage 存储已生成时间的账号列表
+const LAST_UPDATE_TIME_KEY = 'lastAppleIdUpdateTime3'; // localStorage 存储上次更新的时间戳
+const STORED_ACCOUNTS_KEY = 'storedAppleIdAccounts3'; // localStorage 存储已生成时间的账号列表
 
 /**
  * 获取一个在指定天数范围内的随机日期时间
@@ -91,7 +92,7 @@ const STORED_ACCOUNTS_KEY = 'storedAppleIdAccounts4'; // localStorage 存储已�
   };
 
 // 从API获取额外账号数据
-const fetchAdditionalAccounts = async () => {
+/* const fetchAdditionalAccounts = async () => {
   try {
     const urls = [
       'https://idshare001.me/node/getid.php?getid=1',
@@ -113,7 +114,7 @@ const fetchAdditionalAccounts = async () => {
     return [];
   }
 };
-
+ */
 // 组件挂载时执行逻辑
 onMounted(async () => {
   isLoading.value = true;
@@ -147,7 +148,7 @@ onMounted(async () => {
   }
 
   // 2. 异步获取API账号数据
-  try {
+/*   try {
     const apiAccounts = await fetchAdditionalAccounts();
     if (apiAccounts.length > 0) {
       accounts.value = [...apiAccounts, ...accounts.value];
@@ -156,7 +157,7 @@ onMounted(async () => {
     console.error('API账号加载失败:', error);
   } finally {
     isLoading.value = false;
-  }
+  } */
 });
 
 /**
@@ -180,37 +181,92 @@ onMounted(async () => {
   const maskedPart = '*'.repeat(prefix.length - 2);
   return visiblePart + maskedPart + domain;
 };
+
+// 通用的复制函数
+const copyToClipboard = async (text, successMessage, errorMessage) => {
+  try {
+    await navigator.clipboard.writeText(text);
+    ElMessage({
+        message: successMessage,
+        type: 'success',
+    });
+  } catch (err) {
+    console.error(errorMessage, err);
+     ElMessage.error(errorMessage+ ' 请手动复制。');
+  }
+};
+
+// 复制账户的函数
+const copyAccount = (account) => {
+  copyToClipboard(account, '账户已复制到剪贴板！', '复制账户失败：');
+};
+
+// 复制密码的函数
+const copyPassword = (password) => {
+  copyToClipboard(password, '密码已复制到剪贴板！', '复制密码失败：');
+};
 </script>
 
-<h1 style="text-align: center;"><span style="color: #ff0000;"><strong>{{currentTitle}}最新苹果日本账号 APPLE ID 免费账号共享</strong></span></h1>
+<h1 style="text-align: center;"><span style="color: #ff0000;"><strong>{{currentTitle}}最新免费香港区苹果Apple ID共享-香港Apple ID使用指南</strong></span></h1>
 
-每日更新，最新**日区 Apple ID** 限时共享！我们致力于为您提供**实时可用**的**日本 Apple ID 账户**，并进行**严格的有效性检测**。通过这些**日区账号**，您可以轻松登录 App Store，**畅享下载日本独有的应用程序**，探索更广阔的数字世界。立即获取，体验无界应用！
+不定时更新，最新**香港 Apple ID** 限时免费共享！我们致力于为您提供**实时可用**的**香港 Apple ID 账户**，并进行**严格的有效性检测**。通过这些**港区账号**，您可以轻松登录 App Store，**畅享下载港区独有的应用程序**，探索更广阔的数字世界。立即获取，体验无界应用！
 
 ---
 
 ::: danger 
 
- 使用共享苹果账号必须从App Store 登录，千万不要登录「iCloud」跟「设置」，否则可能导致锁机或者隐私泄漏，手机被锁我们也无能为力！
+ **香港共享苹果账号**使用须知：必须从App Store 登录，千万不要登录「iCloud」跟「设置」，**否则可能导致锁机**或者隐私泄漏，手机被锁我们也无能为力！
 
 :::
 
-共享账号随时都会失效，如果无可用账号，请过几小时重新查看页面（定时维护）。
+#### 【温馨提示】共享账号状态说明：
+
+请注意，共享账户因使用人数众多，且设备与IP地址更换频繁，其状态会动态变化。**若您在使用时遇到账号“锁定”或提示“未激活”等情况，请耐心等待。**
+
+我们正持续在后台进行维护和更新。一旦账号恢复正常并可用，我们将第一时间在此页面与大家共享。感谢您的理解与配合！
 
 如果你担心隐私问题或着急用的用户可以购买独享账户（一直都是你的）或者去租一个，不着急等第下次更新新的免费Apple ID
 
 
 <el-row :gutter="24">
     <el-col style="text-align: center;" :span="12" :xs="24">
-      <a href="https://shop.muooy.com/" target="_blank" rel="noreferrer"><el-button color="#3366ff" :dark="isDark">购买独享ID（优惠码：juzixp）</el-button></a>
+      <a href="https://shop.muooy.com/buy/11" target="_blank" rel="noreferrer"><el-button color="#3366ff" :dark="isDark">购买独享ID [优惠码：juzixp（限制次数不定时补）]</el-button></a>
     </el-col>
     <el-col style="text-align: center;" :span="12" :xs="24">
       <a href="https://shop.muooy.com/buy/21" target="_blank" rel="noreferrer"><el-button style="color:#FFFFFF;" color="#ff6600" :dark="isDark">租借临时账号</el-button></a>
     </el-col>
 </el-row>
 
-## 日区共享账户列表
+## 香港共享账户列表
 
-<accountsList :accounts="accounts" :loading="isLoading" />
+<!-- <accountsList :accounts="accounts" :loading="isLoading" /> -->
+
+
+<table class="account-table">
+  <thead>
+    <tr>
+      <th>账号</th>
+      <th>密码</th>
+      <th>更新时间</th>
+      <th colspan="2">操作</th> <!-- 操作列合并2个单元格 -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr v-for="account in accounts" :key="account.account">
+      <td>{{ maskAccountPrefix(account.account) }}</td>
+      <td>{{ '*'.repeat(account.password.length) }}</td> <!-- 密码遮掩显示 -->
+      <td>{{ account.updateTime }}</td>
+      <td>
+        <el-button type="primary" @click="copyAccount(account.account)">复制账户</el-button>
+        <!-- <button @click="copyAccount(account.account)" class="copy-button copy-account-btn">复制账户</button> -->
+      </td>
+      <td>
+        <el-button type="success" @click="copyPassword(account.password)">复制密码</el-button>
+        <!-- <button @click="copyPassword(account.password)" class="copy-button copy-password-btn">复制密码</button> -->
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 
 ## 登录步骤&使用指南
@@ -223,7 +279,7 @@ onMounted(async () => {
 4. 登录成功后即可下载你想下载App啦。
 5. [点此阅读苹果共享账户登录App Store步骤](/guide/apple-shared-id-login-app-store.html)
 
-![日本Apple ID登录步骤](https://img.muooy.com/img/1/2025/06/27/685e4a49306cd.webp)
+![香港Apple ID登录步骤](https://img.muooy.com/img/1/2025/06/27/685e4a49306cd.webp)
 
 <style scoped>
 /* 按钮通用样式 */
