@@ -230,10 +230,10 @@ const copyPassword = (password) => {
 
 <el-row :gutter="24">
     <el-col style="text-align: center;" :span="12" :xs="24">
-      <a href="https://shop.muooy.com/buy/11" target="_blank" rel="noreferrer"><el-button color="#3366ff" :dark="isDark">购买独享ID [优惠码：juzixp（限制次数不定时补）]</el-button></a>
+      <a href="https://shop.muooy.com/buy/11" target="_blank" ><el-button color="#3366ff" :dark="isDark">购买独享ID [优惠码：juzixp（限制次数不定时补）]</el-button></a>
     </el-col>
     <el-col style="text-align: center;" :span="12" :xs="24">
-      <a href="https://shop.muooy.com/buy/21" target="_blank" rel="noreferrer"><el-button style="color:#FFFFFF;" color="#ff6600" :dark="isDark">租借临时账号</el-button></a>
+      <a href="https://shop.muooy.com/buy/21" target="_blank" ><el-button style="color:#FFFFFF;" color="#ff6600" :dark="isDark">租借临时账号</el-button></a>
     </el-col>
 </el-row>
 

@@ -204,18 +204,18 @@ const maskAccountPrefix = (email) => {
 
 ---
 
-<strong><span style="color: #ff0000;">推荐1：</span>苹果美国/日本/香港/台湾/英国等地区APPLE ID独享账号<span class="md-meta-i-c md-link"><a href="https://shop.muooy.com/" target="_blank" rel="noreferrer"><span class="md-plain">【点击进入购买】</span></a></span></strong>
+<strong><span style="color: #ff0000;">推荐1：</span>苹果美国/日本/香港/台湾/英国等地区APPLE ID独享账号<span class="md-meta-i-c md-link"><a href="https://shop.muooy.com/" target="_blank" ><span class="md-plain">【点击进入购买】</span></a></span></strong>
 
-<strong><span style="color: #3366ff;">推荐2：</span>已购Shadowrocket（小火箭）独享成品账号<span class="md-meta-i-c md-link"><a href="https://shop.muooy.com/buy/15" target="_blank" rel="noreferrer"><span class="md-plain">【点击进入购买】</span></a></span></strong>
+<strong><span style="color: #3366ff;">推荐2：</span>已购Shadowrocket（小火箭）独享成品账号<span class="md-meta-i-c md-link"><a href="https://shop.muooy.com/buy/15" target="_blank" ><span class="md-plain">【点击进入购买】</span></a></span></strong>
 
-<strong><span style="color: #ff6600;">推荐3：</span>已购Shadowrocket（小火箭）共享账号<span class="md-meta-i-c md-link md-expand"><a href="https://shop.muooy.com/buy/21" target="_blank" rel="noreferrer"><span class="md-plain">【点击进入购买】</span></a></span></strong>
+<strong><span style="color: #ff6600;">推荐3：</span>已购Shadowrocket（小火箭）共享账号<span class="md-meta-i-c md-link md-expand"><a href="https://shop.muooy.com/buy/21" target="_blank" ><span class="md-plain">【点击进入购买】</span></a></span></strong>
 
 <el-row :gutter="24">
     <el-col style="text-align: center;" :span="12" :xs="24">
-      <a href="https://shop.muooy.com/" target="_blank" rel="noreferrer"><el-button color="#3366ff" :dark="isDark">购买独享ID（优惠码：juzixp）</el-button></a>
+      <a href="https://shop.muooy.com/" target="_blank" ><el-button color="#3366ff" :dark="isDark">购买独享ID（优惠码：juzixp）</el-button></a>
     </el-col>
     <el-col style="text-align: center;" :span="12" :xs="24">
-      <a href="https://shop.muooy.com/buy/21" target="_blank" rel="noreferrer"><el-button style="color:#FFFFFF;" color="#ff6600" :dark="isDark">租借临时账号</el-button></a>
+      <a href="https://shop.muooy.com/buy/21" target="_blank" ><el-button style="color:#FFFFFF;" color="#ff6600" :dark="isDark">租借临时账号</el-button></a>
     </el-col>
 </el-row>
 
