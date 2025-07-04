@@ -156,7 +156,7 @@ onMounted(async () => {
 
 <h1 style="text-align: center;"><span style="color: #ff0000;"><strong>{{currentTitle}}免费Shadowrocket小火箭共享账号 | 已购买小火箭免费共享Apple ID</strong></span></h1>
 
-每日更新，免费**已购Shadowrocket小火箭共享Apple ID**！我们致力于为您提供**实时可用**的shadowrocket已购付费美区账号共享，并进行**严格的有效性检测**。通过这些账号，您可以轻松登录 App Store，**免费下载Shadowrocket**应用程序，探索更广阔的数字世界。立即获取，体验无界应用！
+每日更新，免费**已购Shadowrocket小火箭共享Apple ID账号**！我们致力于为您提供**实时可用**的shadowrocket已购付费美区账号共享，并进行**严格的有效性检测**。通过这些账号，您可以轻松登录 App Store，**免费下载Shadowrocket**应用程序，探索更广阔的数字世界。立即获取，体验无界应用！
 
 ---
 

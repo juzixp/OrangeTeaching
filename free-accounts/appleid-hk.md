@@ -209,7 +209,7 @@ const copyPassword = (password) => {
 
 <h1 style="text-align: center;"><span style="color: #ff0000;"><strong>{{currentTitle}}最新免费香港区苹果Apple ID共享-香港Apple ID使用指南</strong></span></h1>
 
-不定时更新，最新**香港 Apple ID** 限时免费共享！我们致力于为您提供**实时可用**的**香港 Apple ID 账户**，并进行**严格的有效性检测**。通过这些**港区账号**，您可以轻松登录 App Store，**畅享下载港区独有的应用程序**，探索更广阔的数字世界。立即获取，体验无界应用！
+不定时更新，最新**香港 Apple ID账号** 限时免费共享！我们致力于为您提供**实时可用**的**香港 Apple ID 账户**，并进行**严格的有效性检测**。通过这些**港区账号**，您可以轻松登录 App Store，**畅享下载港区独有的应用程序**，探索更广阔的数字世界。立即获取，体验无界应用！
 
 ---
 

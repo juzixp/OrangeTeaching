@@ -188,7 +188,7 @@ const maskAccountPrefix = (email) => {
 
 <h1 style="text-align: center;"><span style="color: #ff0000;"><strong>{{currentTitle}}最新苹果美区账号 APPLE ID 免费账号共享</strong></span></h1>
 
-每日更新，最新**美区 Apple ID** 限时共享！我们致力于为您提供**实时可用**的**美国区 Apple ID 账户**，并进行**严格的有效性检测**。通过这些美区账号，您可以轻松登录 App Store，**畅享下载美区独有的应用程序**，探索更广阔的数字世界。立即获取，体验无界应用！
+每日更新，最新**美区 Apple ID账号** 限时共享！我们致力于为您提供**实时可用**的**美国区 Apple ID 账户**，并进行**严格的有效性检测**。通过这些美区账号，您可以轻松登录 App Store，**畅享下载美区独有的应用程序**，探索更广阔的数字世界。立即获取，体验无界应用！
 
 ---
 
