@@ -1,6 +1,6 @@
 ---
 title: 最新日本苹果ID账号APPLE ID 免费账号共享
-description: 分享最新可用日本苹果AppleID账号，立即获取最新免费日区Apple ID！每日更新并亲测验证可用性，确保您能轻松下载日本区App Store独占应用。请查阅使用说明，共同维护账号可用性。
+description: 分享可用的日本苹果AppleID账号，立即获取最新免费日区Apple ID共享账号！每日更新并亲测验证可用性，确保您能轻松下载日本区App Store独占应用。请查阅使用说明，共同维护账号可用性。
 ---
 
 <script setup>
@@ -158,7 +158,7 @@ onMounted(async () => {
     isLoading.value = false;
   } */
 
- 
+
 });
 
 /**
