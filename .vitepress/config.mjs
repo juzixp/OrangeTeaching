@@ -202,7 +202,7 @@ function getFreeAccountsSidebarZhCN() {
     {
       text: 'ChatGPT共享账户',
       items: [
-        { text: '待更新', link: '#' },
+        { text: '免费ChatGPT共享账号', link: '/free-accounts/chatgpt' },
       ],
       collapsed: false,
     }
