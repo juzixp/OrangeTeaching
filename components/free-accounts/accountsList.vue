@@ -110,7 +110,6 @@ const maskAccountPrefix = (email) => {
 .account-info {
   flex: 1;
   line-height: 1.6;
-  margin: 0 auto;
 }
 
 .account-name {

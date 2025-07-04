@@ -151,7 +151,7 @@ onMounted(async () => {
   }
 
   // 2. 异步获取API账号数据
-  try {
+  /* try {
     const apiAccounts = await fetchAdditionalAccounts();
     if (apiAccounts.length > 0) {
       accounts.value = [...apiAccounts, ...accounts.value];
@@ -160,7 +160,7 @@ onMounted(async () => {
     console.error('API账号加载失败:', error);
   } finally {
     isLoading.value = false;
-  }
+  } */
 });
 
 /**
