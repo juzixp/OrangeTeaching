@@ -21,6 +21,8 @@ const currentTitle = ref(getCurrentYearMonth());
 
 // 初始账号数据
 const initialAccounts = [
+  { account: 'yunxinqianao@163.com', password: '6EWYPpZWX8',status: '正常' },
+  { account: 'maryamwkebrooksdtt@gmail.com', password: 'Qv8hZahrR4',status: '正常' },
   { account: 'mason9lste@outlook.com', password: 'TDCTRpW4akuU', status: '正常' },
   { account: 'chloedvpowellgl@gmail.com', password: 'Fe6M3ZsnBA', status: '正常' },
   { account: '1045g936c45asg@jetlf.com', password: 'Cs!X2Hvh', status: '正常' },

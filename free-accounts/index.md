@@ -4,6 +4,8 @@ description: 每日免费更新！提供免费苹果 Apple ID 共享账户和 Ch
 ---
 # 免费账户
 
+定期分享，提供免费苹果 Apple ID 共享账户和 ChatGPT 等热门应用账号。每日更新，助您轻松体验最新数字服务与内容。
+
 ## 导航目录
 <script setup>
 import { useData } from 'vitepress'

@@ -1,5 +1,9 @@
 # 用户指南目录
 ---
+
+定期更新苹果AppleID、ChatGPT，Google，以及有关桔子小铺的一些商品使用指南。
+
+
 <script setup>
 import { useData } from 'vitepress'
 import { computed } from 'vue' // 引入 computed 用于创建响应式属性

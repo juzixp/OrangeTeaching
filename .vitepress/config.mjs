@@ -169,10 +169,11 @@ function getGuideSidebarZhCN() {
 function getFaqSidebarZhCN() {
   return [
     {
-      text: '常见问题',
+      text: 'AppleID 常见问题',
       items: [
-        { text: '待更新', link: '#' },
-      ]
+        { text: 'Apple ID 常见问题汇总', link: '/faq/apple-id-faq' },
+      ],
+      collapsed: false,
     }
   ]
 }
@@ -183,7 +184,8 @@ function getTutorialsSidebarZhCN() {
       text: '教程中心',
       items: [
         { text: '待更新', link: '#' },
-      ]
+      ],
+      collapsed: false,
     }
   ]
 }

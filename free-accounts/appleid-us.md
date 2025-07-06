@@ -21,6 +21,8 @@ const currentTitle = ref(getCurrentYearMonth());
 
 // 初始数据，这些是基础的账号和密码，不包含时间
 const initialAccounts = [
+  { account: 'yunxinqianao@163.com', password: '6EWYPpZWX8',status: '正常' },
+  { account: 'maryamwkebrooksdtt@gmail.com', password: 'Qv8hZahrR4',status: '正常' },
   { account: 'abnercathy1269@gmail.com', password: '6WgdJDtxU8',status: '正常' },
   { account: 'charlesbfpriveraxdx@gmail.com', password: 'TDsYV59Wnqfz',status: '正常'  },
   { account: 'toddcopthorne@mail.com', password: 'CwF@FAM6',status: '正常'  },
