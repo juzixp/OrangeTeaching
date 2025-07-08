@@ -52,7 +52,7 @@ export default defineConfig({
     },
     footer: { //页脚
       message: 'Released under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> License.',
-      copyright: 'Copyright © 2025 <a href="https://shop.muooy.com/">果学坊</a> | 联系我：<a href="https://t.me/juzihenku" target="_blank" rel="noopener">@juzihenku</a>'
+      copyright: 'Copyright © 2025 <a href="https://docs.applexp.com">果学坊</a> | 联系我：<a href="https://t.me/juzihenku" target="_blank" rel="noopener">@juzihenku</a>'
     }
   },
   locales: {
