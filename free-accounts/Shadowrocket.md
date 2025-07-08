@@ -36,6 +36,65 @@ const isLoading = ref(false);
 const LAST_UPDATE_TIME_KEY = 'lastAppleIdUpdateTime2';
 const STORED_ACCOUNTS_KEY = 'storedAppleIdAccounts2';
 
+
+/**
+ * 获取一个在指定天数范围内的随机日期时间
+ * @param {number} daysAgo - 随机时间距离当前的最大天数
+ * @returns {Date} 随机生成的日期对象
+ */
+const getRandomRecentTime = (daysAgo) => {
+  const now = new Date();
+  const targetDate = new Date(now.getTime() - daysAgo * 24 * 60 * 60 * 1000); // daysAgo 天前的日期
+
+  // 随机生成一个介于 targetDate 和 now 之间的毫秒数
+  const randomMs = targetDate.getTime() + Math.random() * (now.getTime() - targetDate.getTime());
+  const randomDate = new Date(randomMs);
+
+  // 确保时间在上午12点（0点，即午夜）到晚上24点（23点，即午夜前）之间
+  const randomHour = Math.floor(Math.random() * 24); // 0-23
+  const randomMinute = Math.floor(Math.random() * 60); // 0-59
+  const randomSecond = Math.floor(Math.random() * 60); // 0-59
+
+  randomDate.setHours(randomHour);
+  randomDate.setMinutes(randomMinute);
+  randomDate.setSeconds(randomSecond);
+
+  return randomDate;
+};
+
+/**
+ * 格式化日期时间为 YYYY-MM-DD HH:mm:ss
+ * @param {Date} date - 日期对象
+ * @returns {string} 格式化后的日期时间字符串
+ */
+const formatDateTime = (date) => {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  const hours = String(date.getHours()).padStart(2, '0');
+  const minutes = String(date.getMinutes()).padStart(2, '0');
+  const seconds = String(date.getSeconds()).padStart(2, '0');
+  return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+};
+
+/**
+ * 生成并更新账号列表的时间，并存储到 localStorage
+ */
+const generateAndStoreAccounts = () => {
+  accounts.value = initialAccounts.map(account => {
+    // 随机选择最近1天或2天前的日期进行随机化
+    const randomDaysAgo = Math.random() < 0.5 ? 1 : 2; // 50% 概率是1天前，50% 概率是2天前
+    const randomDateTime = getRandomRecentTime(randomDaysAgo);
+    return {
+      ...account,
+      updateTime: formatDateTime(randomDateTime)
+    };
+  });
+  // 存储最新的更新时间戳和带有时间的账号列表
+  localStorage.setItem(LAST_UPDATE_TIME_KEY, Date.now().toString());
+  localStorage.setItem(STORED_ACCOUNTS_KEY, JSON.stringify(accounts.value));
+};
+
 // 解析文本格式账号数据
 const parseTextAccounts = (text) => {
   const accounts = [];
@@ -133,6 +192,30 @@ onMounted(async () => {
   } else {
     accounts.value = initialAccounts;
   }
+
+  if (lastUpdateTime && storedAccounts) {
+    const lastUpdateTimestamp = parseInt(lastUpdateTime, 10);
+    if (Date.now() - lastUpdateTimestamp > sixHoursInMs) {
+      generateAndStoreAccounts();
+    } else {
+      try {
+        const parsedStoredAccounts = JSON.parse(storedAccounts);
+        if (parsedStoredAccounts.length === initialAccounts.length &&
+            parsedStoredAccounts.every((sa, i) => sa.account === initialAccounts[i].account && sa.password === initialAccounts[i].password)) {
+          accounts.value = parsedStoredAccounts;
+        } else {
+          console.warn('存储的账号列表与当前配置不匹配，重新生成时间。');
+          generateAndStoreAccounts();
+        }
+      } catch (e) {
+        console.error('解析存储的账号数据失败或数据不一致，重新生成。', e);
+        generateAndStoreAccounts();
+      }
+    }
+  } else {
+    generateAndStoreAccounts();
+  }
+  
 
   // 获取API账号数据
   try {
