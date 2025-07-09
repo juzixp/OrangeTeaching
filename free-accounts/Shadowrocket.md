@@ -218,7 +218,7 @@ onMounted(async () => {
   
 
   // 获取API账号数据
-  try {
+  /* try {
     const [apiAccounts, rodAccounts] = await Promise.all([
       fetchAdditionalAccounts(),
       fetchRodAccounts()
@@ -233,7 +233,7 @@ onMounted(async () => {
     console.error('API账号加载失败:', error);
   } finally {
     isLoading.value = false;
-  }
+  } */
 });
 </script>
 
